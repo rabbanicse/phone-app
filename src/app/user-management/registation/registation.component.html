@@ -1,0 +1,136 @@
+<ion-content>
+  <div class="registration-main">
+    <section class="heading-main">
+      <h2>Phone-A</h2>
+    </section>
+    <section class="form-main">
+      <div class="text">USER REGISTRATION</div>
+      <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+        <div class="field">
+          <input
+            type="text" pattern="[0-9]*" inputmode="numeric"
+            name="mobileNumber"
+            #mobileNumber="ngModel"
+            [(ngModel)]="checkPhoneNoStatus.mobileNumber"
+            placeholder="Mobile Number"
+          />
+        </div>
+
+        <div class="operator field">
+          <h3>Select Operator</h3>
+          <ul>
+            <li
+              [ngClass]="{
+                select: checkPhoneNoStatus.operator == 2,
+                deselect: checkPhoneNoStatus.operator == null
+              }"
+            >
+              <img
+                src="/assets/bl.jpg"
+                value="2"
+                name="operator"
+                #operator="ngModel"
+                ngDefaultControl
+                [(ngModel)]="checkPhoneNoStatus.operator"
+                id="blImg"
+                (click)="showPreviewBl()"
+              />
+            </li>
+            <li
+              [ngClass]="{
+                select: checkPhoneNoStatus.operator == 1,
+                deselect: checkPhoneNoStatus.operator == null
+              }"
+            >
+              <img
+                src="/assets/gp.jpg"
+                value="1"
+                name="operator"
+                ngDefaultControl
+                #operator="ngModel"
+                [(ngModel)]="checkPhoneNoStatus.operator"
+                id="gpImg"
+                (click)="showPreviewGp()"
+              />
+            </li>
+            <li
+              [ngClass]="{
+                select: checkPhoneNoStatus.operator == 3,
+                deselect: checkPhoneNoStatus.operator == null
+              }"
+            >
+              <img
+                src="/assets/robi.jpg"
+                value="3"
+                name="operator"
+                ngDefaultControl
+                #operator="ngModel"
+                [(ngModel)]="checkPhoneNoStatus.operator"
+                id="robiImg"
+                (click)="showPreviewRobi()"
+              />
+            </li>
+            <li
+              [ngClass]="{
+                select: checkPhoneNoStatus.operator == 4,
+                deselect: checkPhoneNoStatus.operator == null
+              }"
+            >
+              <img
+                src="/assets/airtel.jpg"
+                value="4"
+                name="operator"
+                ngDefaultControl
+                #operator="ngModel"
+                [(ngModel)]="checkPhoneNoStatus.operator"
+                id="airtelImg"
+                (click)="showPreviewAirtel()"
+              />
+            </li>
+            <li
+              [ngClass]="{
+                select: checkPhoneNoStatus.operator == 5,
+                deselect: checkPhoneNoStatus.operator == null
+              }"
+            >
+              <img
+                src="/assets/teletalk.jpg"
+                value="5"
+                name="operator"
+                ngDefaultControl
+                #operator="ngModel"
+                [(ngModel)]="checkPhoneNoStatus.operator"
+                id="teletalkImg"
+                (click)="showPreviewTeletalk()"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="condition">
+          <ion-text class="condition-text" color="secondary">
+            <ion-checkbox
+              type="checkbox"
+              name="termsConditions"
+              #termsConditions="ngModel"
+              [(ngModel)]="checkPhoneNoStatus.termsConditions"
+              class="condition-checkbox"
+            ></ion-checkbox>
+            I agree to the
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="condition-link"
+              >Terms & Conditions</a
+            >
+          </ion-text>
+        </div>
+
+        <ion-button type="submit" color="default" class="next-btn"
+          ><span>NEXT</span>
+          <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+        </ion-button>
+      </form>
+    </section>
+  </div>
+</ion-content>

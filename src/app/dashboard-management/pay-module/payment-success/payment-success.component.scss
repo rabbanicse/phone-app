@@ -1,0 +1,78 @@
+.dashboard-heading {
+  display: flex;
+  background: linear-gradient(rgba(60, 58, 145, 1), rgba(149, 24, 193, 1));
+  flex-direction: row;
+  height: 58px;
+}
+
+.toggle-bar {
+  position: absolute;
+  background-image: url(/assets/icon/menu.svg);
+  align-items: flex-start;
+  color: #f1f1f1;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(180deg, #54329e 0%, #8c1dbc 100%);
+  box-sizing: border-box;
+  box-shadow: -5px -5px 12px rgba(255, 255, 255, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 100px;
+}
+
+.toggle-icon {
+  background: url(/assets/icon/back.svg) center center no-repeat;
+  width: 36px;
+  height: 36px;
+}
+
+.heading-text {
+  position: absolute;
+  top: 15px;
+  font-size: 20px;
+  color: #f1f1f1;
+  left: 50px;
+  right: 50px;
+  text-align: center;
+}
+
+.toggle-bar.notification {
+  top: 10px;
+  right: 10px;
+  left: auto;
+  color: #f1f1f1;
+  font-size: 40px;
+}
+
+.heading-notification {
+  background: url(/assets/icon/notifications.svg) top center no-repeat;
+  width: 36px;
+  height: 36px;
+}
+
+
+.dashboard {
+  width: 100%;
+  display: block;
+}
+
+.payment-message-main {
+  position: relative;
+  background: #e3edf7;
+  box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  left: 5%;
+  width: 90%;
+  text-align: center;
+  padding: 25px;
+  position: absolute;
+  padding: 25px;
+  top: 35%;
+}
+
+
+
+.completed {
+  font-size: 16px;
+}

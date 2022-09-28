@@ -1,0 +1,30 @@
+<app-application-header></app-application-header>
+<section class="form-main">
+  <form>
+    <div class="field-receiver">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <div>Receiver</div>
+      <div class="receiver-input">
+        <img src="/assets/pizza-hut.png" class="img-center" />
+        <span class="receiver-name">Pizza Hut Pvt Ltd</span>
+      </div>
+    </div>
+
+    <div class="field">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <span>Amount</span>
+      <div>
+        <input type="number" placeholder="Enter Amount" />
+      </div>
+    </div>
+  </form>
+</section>
+
+
+<!-- Next Button -->
+<div class="next-main-div">
+  <ion-button color="default" class="next-btn"
+  [routerLink]="['/scan-payment']"><span>{{ "addCardPage.next" | translate }}</span>
+    <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+</div>

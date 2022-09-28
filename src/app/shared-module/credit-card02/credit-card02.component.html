@@ -1,0 +1,49 @@
+
+
+<app-application-header></app-application-header>
+<section class="form-main">
+  <form>
+    <div class="field-receiver">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <div>Pay From</div>
+      <div class="box-shadow select-card">
+        <img src="/assets/add-card.png" class="img-center"/>
+        <div>Choose card to pay From</div>        
+      </div>
+    </div>
+    <div class="field-receiver">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <div>Pay To</div>
+      <div class="box-shadow select-card">
+        <img src="/assets/add-card.png" class="img-center"/>
+        <div>Choose card for bill payment</div>        
+      </div>
+    </div>
+    <div class="field">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <span>Amount</span>
+      <div>
+        <input type="text" placeholder="1500" />
+      </div>
+    </div>
+  </form>
+</section>
+<div class="condition">
+  <ion-text class="condition-text" color="secondary">
+    <ion-checkbox (ionChange)="checkboxClick($event)" class="condition-checkbox"></ion-checkbox>
+    {{'addCardPage.condition' | translate}}
+    <a href="http://" target="_blank" rel="noopener noreferrer"
+       class="condition-link">{{'addCardPage.terms' | translate}}</a>
+  </ion-text>
+</div>
+
+<!-- Next Button -->
+<div class="next-main-div">
+  <ion-button color="default"
+              [routerLink]="['/dashboard/send-money/select-payment-card']"
+
+
+              class="next-btn"><span>{{'addCardPage.next' | translate}}</span>
+    <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+</div>

@@ -1,0 +1,35 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div class="template box-shadow" >
+    <h3>{{templateObj.templateName}}</h3>
+    <div>Rent for {{templateObj.monthName}}, {{templateObj.year}}</div>
+    <div class="invoice">
+        <div class="invoice-item">
+          <span>Rent</span> <span>{{templateObj.rent}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Water Bill</span><span>{{templateObj.waterBill}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Electic Bill</span> <span>{{templateObj.electricBill}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Gas Bill</span> <span>{{templateObj.gasBill}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Service Charge </span> <span>{{templateObj.serviceCharge}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Others </span> <span>{{templateObj.others}}</span>
+        </div>
+    </div>
+    <div class="total-amount"><span>Total</span> <span>{{templateObj.totalRent}}</span> </div>
+  </div>
+
+  <div class="next-main-div">
+    <ion-button (click)="goToTenants()" color="default" type="submit" class="next-btn" >
+      <span>Select Tenants</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,115 @@
+.home-top-icon {
+  display: flex;
+  font-size: 100px;
+}
+
+.home-top-icon > ion-icon {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 15px;
+  font-size: 30px;
+}
+
+
+
+.bill-pay-option {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: auto auto auto;
+
+  padding: 20px;
+  position: relative;
+  width: 90%;
+  height: 600px;
+  left: 5%;
+  top: 11px;
+  margin-bottom: 60px;
+  background: #e3edf7;
+  box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.bill-pay-option :nth-child(1n) {
+  position: relative;
+  background:#ffffff url(/assets/icon/credit_card.png) center center;
+  background-repeat: no-repeat;
+  margin:auto;
+}
+
+.bill-pay-item {
+  width: 72px;
+  height: 64px;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1);
+  border-radius: 14px;
+
+}
+
+.bill-pay-item img {
+  left: 10px;
+}
+
+//     .bill-pay-option {
+// position:relative;
+// width: 364px;
+// height: 615px;
+// left: 25px;
+// top: 11px;
+// margin-bottom: 50px;
+// background: #E3EDF7;
+// box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+// border-radius: 20px;
+
+//     }
+
+//     .pay-options {
+
+// padding: 10px;
+
+// // position: absolute;
+// width: 291px;
+// height: 565px;
+// left: 61px;
+// top: 160px;
+// overflow-y: scroll;
+
+//     }
+
+//     .pay-items {
+//         // position: absolute;
+//         padding: 20px;
+//         display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// width: 72px;
+// height: 64px;
+// left: 50px;
+// top: 0px;
+// background: #FFFFFF;
+// box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1);
+// border-radius: 14px;
+// align-content: space-around;
+//     }
+
+.bottomNav {
+  background: #e3edf7;
+}
+.bottomNav * {
+  background: transparent;
+}
+.bottomNav span {
+  display: block;
+  border-radius: 100px;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(180deg, #1a16ff -9.66%, #dd09ff 125%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: -4px -2px 8px #ffffff, 4px 2px 8px rgba(145, 145, 145, 0.657315);
+  border: none;
+  line-height: 54px;
+}

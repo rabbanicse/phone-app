@@ -1,0 +1,72 @@
+<form [formGroup]="cardPopupForm" (ngSubmit)="sendToOTP()">
+  <div class="slider-debit" style="align-items: center">
+    <div class="cc debit">
+      <h2>{{card.cardName}}</h2>
+      <div class="chip-day">
+      <div class="chip">
+        <img src="/assets/chip.png" class="img-center"/>
+      </div>
+      <div class="dayleft"> <span class="day-box"> Day Left <br> <span class="days"> 30 </span></span></div>
+    </div>
+      <!-- card number -->
+      <div class="number">
+        <span>{{card.cardNumber | slice:0:4 }}</span>
+        <span>{{card.cardNumber | slice:4:8 }}</span>
+        <span>{{card.cardNumber | slice:8:12 }}</span>
+        <span>{{card.cardNumber | slice:12:16 }}</span>
+        <!-- {{card.cardNumber}} -->
+      </div>
+
+      <!-- valid / ccv -->
+      <div class="date">
+        <div class="valid-div">
+          <span class="instructions valid">{{'cardPage.validThru' | translate}}</span>
+          <span class="date">{{card.expiryDate  | date: 'MM/yy'}}</span>
+        </div>
+      </div>
+
+
+      <div class="card-logo">
+        <img src="/assets/visa-white.png" class="img-center"/>
+      </div>
+
+      <!-- shine -->
+      <div class="shine"></div>
+      <div class="shine shine-layer-two"></div>
+    </div>
+    <br>
+
+  </div>
+
+  <!-- <div class="condition">
+  <ion-text class="condition-text" color="secondary">
+  <ion-checkbox  class="condition-checkbox" formControlName="acceptTerms"></ion-checkbox>
+  {{'addCardPage.condition' | translate}}
+  <a href="http://" target="_blank" rel="noopener noreferrer"
+     class="condition-link">{{'addCardPage.terms' | translate}}</a>
+     <ion-text color="danger" *ngIf="submitted && this.cardPopupForm.controls.acceptTerms.errors?.required">
+      Please Accept the conditions
+    </ion-text>
+  </ion-text>
+
+
+  </div> -->
+
+
+  <div class="condition">
+    <input type="checkbox" class="condition-checkbox" formControlName="acceptTerms" />
+    {{'addCardPage.condition' | translate}}
+    <a href="http://" target="_blank" rel="noopener noreferrer"
+       class="condition-link">{{'addCardPage.terms' | translate}}</a>
+    <br>
+    <ion-text color="danger"  *ngIf="submitted && this.cardPopupForm.controls.acceptTerms.errors?.required">
+      Please Accept the conditions
+    </ion-text>
+    </div>
+
+  <div class="next-main-div">
+  <ion-button type="submit" color="default"  class="next-btn"><span>{{'PAY NOW' | translate}}</span>
+  <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+  </div>
+  </form>

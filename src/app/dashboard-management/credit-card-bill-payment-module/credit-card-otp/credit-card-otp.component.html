@@ -1,0 +1,37 @@
+<div class="dashboard">
+  <app-application-header [applicationHeader]="headerText"></app-application-header>
+</div>
+
+<!-- OTP Verify -->
+
+<ion-content class="ion-padding">
+  <div class="otp-main-div">
+    <div class="biling-details">
+      <h2>{{title}}</h2>
+      <h5>{{subTitle}}</h5>
+      <div class="amount"> ৳ {{amount}}</div>
+    </div>
+    <div class="otp-user-input">
+      <ion-label class="otp-text">
+        <img src="/assets/icon/otp.svg" class="img-center"/>
+        <h6>{{'otpVerificationPage.otpVerification' | translate}}</h6>
+        <span id="otp-sent">{{'otpVerificationPage.enterOtpCodeSentTo' | translate}} </span>
+        <span id="otp-sent-number">{{customer?.mobileNumber  }}</span>
+      </ion-label>
+      <div class="input_otp">
+         <ng-otp-input  (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+      </div>
+      <ion-label class="otp-not-recieve-text">{{'otpVerificationPage.notRecieveOtpCode' | translate}}</ion-label>
+      <a  class="resend">{{'otpVerificationPage.resendCode' | translate}}</a>
+    </div>
+
+  </div>
+  <h6 class="otp-msg" *ngIf="msg !== ''"> {{msg}}</h6>
+  <!-- Next Button -->
+  <div class="next-main-div">
+    <ion-button color="default" (click)="confirmOtp()" class="next-btn"><span>{{ 'Confirm' | translate}}</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>
+<!-- </ion-content> -->

@@ -1,0 +1,164 @@
+{
+  "dashboardPage": {
+    "headerText": "PHONE A",
+    "profile": "PROFILE",
+    "contact": "CONTACT",
+    "offer": "OFFER",
+    "pos": "POS",
+    "reqMoney": "REQ MONEY",
+    "apps": "Apps",
+    "billPay": "Card Bill Pay",
+    "shopping": "Shopping",
+    "tution": "Tution",
+    "food": "Food",
+    "menu": "Menu",
+    "themeChange": "Theme Change",
+    "chat": "Chat",
+    "cards": "Cards",
+    "pay": "Pay",
+    "sendMoney": "Send Money",
+    "scan": "Scan",
+    "language": "Language",
+    "mobileRecharge": "Mobile Recharge"
+  },
+  "cardPage": {
+    "creditCard": "CREDIT CARD",
+    "bankOfPhoneA": "Bank of PHONE A",
+    "masterCard": "Master Card",
+    "americanExpress": "American Express",
+    "visa": "Visa",
+    "validThru": "Valid Thru",
+    "ccv": "CCV",
+    "nameOnCard": "Name ON CARD",
+    "manage": "MANAGE",
+    "payNow": "PAY NOW",
+    "addCard": "ADD CARD",
+    "debitCard": "Debit Card"
+  },
+  "billpayPage": {
+    "apps": "Apps",
+    "billPay": "Bill Pay",
+    "shopping": "Shopping",
+    "tution": "Tution",
+    "food": "Food",
+    "menu": "Menu",
+    "themeChange": "Theme Change",
+    "chat": "Chat",
+    "cards": "Cards",
+    "pay": "Pay",
+    "sendMoney": "Send Money",
+    "scan": "Scan"
+  },
+  "creditBillpayPage": {
+    "payFrom": "Pay From",
+    "chooseCardBill": "Choose card to bill payment",
+    "payTo": "Pay To",
+    "amount": "Amount",
+    "condition": "I agree to the",
+    "terms": "Terms & Conditions",
+    "next": "NEXT"
+  },
+  "addCardPage": {
+    "cardType": "Card Type",
+    "cardNumber": "Card Number",
+    "name": "Name",
+    "billingDate": "Billing Date",
+    "monthYear": "Month Year",
+    "expiry": "Expiry",
+    "condition": "I agree to the ",
+    "terms": "Terms & Conditions",
+    "next": "NEXT",
+    "cvv": "CVV"
+  },
+  "loginPage": {
+    "headerText": "PHONE A",
+    "loginText": "LOGIN",
+    "loginButton": "LOGIN",
+    "registration": "Registration",
+    "emailorPhone": "Mobile No",
+    "password": "Password"
+  },
+  "nidScanPage": {
+    "captureFrontPage": "Capture your NID front page",
+    "captureBackPage": "Capture your NID back page",
+    "next": "NEXT"
+  },
+  "nidScanDetailsPage": {
+    "name": "Name",
+    "dob": "Date of Birth",
+    "nidNo": "NID No",
+    "fathersName": "Father's Name",
+    "mothersName": "Mother's Name",
+    "email": "Email",
+    "phoneNo": "Phone No",
+    "address": "Address",
+    "district": "District",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "next": "NEXT"
+  },
+  "registrationPage": {
+    "headerText": "PHONE A",
+    "userRegistration": "User Registration",
+    "condition": "I agree to the ",
+    "terms": "Terms & Conditions",
+    "next": "NEXT",
+    "mobile": "Mobile"
+  },
+  "sendMoneyPage": {
+    "sendToPhoneA": "Send to PHONE A",
+    "sendToCard": "Send to Card",
+    "enterPhoneNumber": "Enter Phone Number",
+    "next": "NEXT"
+  },
+  "applicationHeader": {
+    "headerText": "PHONE A"
+  },
+  "otpVerificationPage": {
+    "otpVerification": "OTP Verification",
+    "enterOtpCodeSentTo": "Enter OTP Code Sent to",
+    "otpSentNumber": "01914434588",
+    "notRecieveOtpCode": "Didn't Receive OTP Code",
+    "resendCode": "Resend Code",
+    "next": "NEXT"
+  },
+  "paymentMessagePage": {
+    "congratulations": "Congratulations",
+    "registrationCompleted": "Your registration is completed.",
+    "cardAddedSuccessfull":"Card Added Successfully",
+    "cardAddedCongratulations":"Congratulations! You have successfully added your credit card"
+  },
+  "tabFooter": {
+    "chat": "Chat",
+    "cards": "Cards",
+    "pay": "Pay",
+    "sendMoney": "Send Money",
+    "scan": "Scan"
+  },
+  "sendMoneyReceiverPage": {
+    "receiver": "Receiver",
+    "amount": "Amount",
+    "next": "NEXT"
+  },
+  "sendMoneyToCardPage": {
+    "sendToPhoneA": "Send to PHONE A",
+    "sendToCard": "Send to Card",
+    "receiver": "Receiver",
+    "amount": "Amount",
+    "next": "NEXT"
+  },
+  "userOverviewPage": {
+    "myAccount": "My Account",
+    "beneficiaryManagement": "Beneficiary Management",
+    "transactionReport": "Transaction Report",
+    "feedback": "Feedback",
+    "rewardPoint": "Reward Point",
+    "faq": "FAQ",
+    "changePasword": "Change Password",
+    "logout": "Logout",
+    "menu": "MENU",
+    "setting": "APP SETTING"
+  },
+  "chatPage": {
+  }
+}

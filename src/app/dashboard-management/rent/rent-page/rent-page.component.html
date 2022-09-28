@@ -1,0 +1,16 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div class="template box-shadow">
+    <h3>Home Owner</h3>
+    <ul>
+      <li> <a [routerLink]="['/dashboard/rent/rent-template']">  <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon> <span>Rent Slip Template </span></a></li>
+      <li><a (click)="goToTenantPageRentSlip()">  <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon> <span>All Sent Slip </span></a></li>
+    </ul>
+  </div>
+  <div class="template box-shadow">
+    <h3>TENANT</h3>
+    <ul>
+      <li> <a (click)="goToTenantPageTenantSlip()">  <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon> <span>Received Rent Slip </span></a></li>
+    </ul>
+  </div>
+</ion-content>

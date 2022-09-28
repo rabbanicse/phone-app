@@ -1,0 +1,23 @@
+.template {
+    padding: 20px;
+    font-size: 14px;
+}
+.template h3{
+    color: #384fc9;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.template ul, .template li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.template li *{
+    display: inline-block;
+    vertical-align: middle;
+    color: #475278;
+    padding: 5px 4px;
+    font-size: 14px;
+    line-height: 0;
+}

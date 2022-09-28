@@ -1,0 +1,41 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div class="template box-shadow" >
+    <h3>{{rentSlipObj.templateName}}</h3>
+    <div>Rent for {{tenantItem.monthName}}, {{rentSlipObj.year}}</div>
+    <div class="invoice">
+        <div class="invoice-item">
+          <span>Rent</span> <span>{{rentSlipObj.rent}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Water Bill</span><span>{{rentSlipObj.waterBill}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Electric Bill</span> <span>{{rentSlipObj.electricBill}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Gas Bill</span> <span>{{rentSlipObj.gasBill}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Service Charge </span> <span>{{rentSlipObj.serviceCharge}}</span>
+        </div>
+        <div class="invoice-item">
+          <span>Others </span> <span>{{rentSlipObj.others}}</span>
+        </div>
+    </div>
+    <div class="total-amount"><span>Total</span> <span>{{rentSlipObj.totalRent}}</span> </div>
+  </div>
+
+  <!-- <div class="next-main-div" *ngIf="rentSlipObj.id == 0">
+    <ion-button color="default" type="submit" class="next-btn">
+      <span>Back</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div> -->
+  <div class="next-main-div" *ngIf="rentSlip == true">
+    <ion-button color="default" type="submit" class="next-btn" (click)="payNow()">
+      <span>Pay Now</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,25 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div class="select-number box-shadow">
+    <div class="enter-number">
+      <h3>Search contact name or number</h3>
+      <input type="number" placeholder="+88" />
+    </div>
+  </div>
+
+  <div class="contact-details2 box-shadow">
+    <div class="contact-details-list">
+      <div class="person-details" class="profile-details" *ngFor="let contact of contactsList">
+        <ion-item (click)="selectTenant(contact)">
+          <ion-avatar slot="start">
+            <img src="/assets/icon/prof_pic.jpg" />
+          </ion-avatar>
+          <ion-label >{{ contact.displayName }} <br />
+            <span *ngFor="let item of contact.phoneNumbers" (click)="selectTenantNumber(item)">{{ item.number }}</span></ion-label
+          >
+        </ion-item>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

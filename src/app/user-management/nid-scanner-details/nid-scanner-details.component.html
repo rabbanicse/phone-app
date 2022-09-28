@@ -1,0 +1,134 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+
+<!-- NID Photo scanned data -->
+<ion-content scroll-y="true">
+
+  <section class="form-main">
+    <form [formGroup]="nidScanDetailsForm" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <span>{{'nidScanDetailsPage.name' | translate}}</span>
+        <div>
+          <input [(ngModel)]="customerDetails.nidName" formControlName="nidName" type="text"
+                 placeholder="{{'nidScanDetailsPage.name' | translate}}"/>
+          <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.nidName.errors?.required">
+            Customer Name Required
+          </ion-text>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>{{'nidScanDetailsPage.dob' | translate}}</span>
+        <div>
+          <input formControlName="dateOfBirth" [(ngModel)]="customerDetails.dateOfBirth" type="date"
+                 placeholder="{{'nidScanDetailsPage.dob' | translate}}"/>
+          <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.dateOfBirth.errors?.required">
+            Date of Birth Required
+          </ion-text>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>{{'nidScanDetailsPage.fathersName' | translate}}</span>
+        <div>
+          <input formControlName="fathersName" type="text"
+                 placeholder="{{'nidScanDetailsPage.fathersName' | translate}}"
+          />
+          <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.fathersName.errors?.required">
+            Father Name Required
+          </ion-text>
+        </div>
+      </div>
+      <div class="field">
+        <span>{{'nidScanDetailsPage.mothersName' | translate}}</span>
+        <div>
+          <input formControlName="mothersName" type="text"
+                 placeholder="{{'nidScanDetailsPage.mothersName' | translate}}"/>
+          <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.mothersName.errors?.required">
+            Mother Name Required
+          </ion-text>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <span>Mobile Number</span>
+        <div>
+          <input formControlName="phoneNo" type="text" [(ngModel)]="customerDetails.phoneNO" placeholder="Mobile Number" [readOnly]="true"/>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>{{'nidScanDetailsPage.email' | translate}}</span>
+        <div>
+          <input formControlName="email" type="email" placeholder="{{'nidScanDetailsPage.email' | translate}}"/>
+          <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.email.errors?.required">
+            Email Address Required
+          </ion-text>
+        </div>
+      </div>
+
+      <div class="field">
+        <span>{{'nidScanDetailsPage.nidNo' | translate}}</span>
+        <input formControlName="nidNo" [(ngModel)]="customerDetails.nidNo" type="number" pattern="[0-9]*" inputmode="numeric"
+               maxlength = "13" placeholder="{{'nidScanDetailsPage.nidNo' | translate}}"/>
+        <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.nidNo.errors?.required">
+          NID Number Required
+        </ion-text>
+      </div>
+      <div class="field">
+        <span>{{'nidScanDetailsPage.address' | translate}}</span>
+        <input formControlName="address" type="text" placeholder="{{'nidScanDetailsPage.address' | translate}}"/>
+        <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.address.errors?.required">
+          Address Required
+        </ion-text>
+      </div>
+      <div class="field">
+        <span>{{'nidScanDetailsPage.district' | translate}}</span>
+        <input formControlName="district" type="text" placeholder="{{'nidScanDetailsPage.district' | translate}}"/>
+        <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.district.errors?.required">
+          District Name Required
+        </ion-text>
+      </div>
+      <div class="field">
+        <span>{{'nidScanDetailsPage.password' | translate}}</span>
+        <input formControlName="password" type="password" pattern="[0-9]*" inputmode="numeric" minLength="4" maxlength="4"
+        placeholder="{{'nidScanDetailsPage.password' | translate}}"/>
+        <ion-text color="danger" *ngIf="isSubmitted && this.nidScanDetailsForm.controls.password.errors?.required">
+          Password Required
+        </ion-text>
+      </div>
+      <div class="field">
+        <span>{{'nidScanDetailsPage.confirmPassword' | translate}}</span>
+        <input formControlName="confirmPassword" type="password" pattern="[0-9]*" inputmode="numeric" minLength="4" maxlength="4"
+               placeholder="{{'nidScanDetailsPage.confirmPassword' | translate}}"/>
+        <ion-text color="danger"
+                  *ngIf="isSubmitted && this.nidScanDetailsForm.controls.confirmPassword.errors?.required">
+          Confirm password Required
+        </ion-text>
+        <!--        <div-->
+        <!--          *ngIf="nidScanDetailsForm.controls.confirmPassword.touched"-->
+        <!--          class="alert alert-danger">-->
+        <!--          <div *ngIf="nidScanDetailsForm.controls.confirmPassword.errors.confirmedValidator">-->
+        <!--            <ion-text color="danger">Password and Confirm-->
+        <!--              Password must be match.-->
+        <!--            </ion-text>-->
+
+        <!--          </div>-->
+
+      </div>
+
+
+      <div class="next-main-div">
+        <ion-button type="submit" color="default" class="next-btn">
+          <span>{{'nidScanDetailsPage.next' | translate}}</span>
+          <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+        </ion-button>
+      </div>
+
+    </form>
+  </section>
+
+
+  <!-- Next Button -->
+
+</ion-content>

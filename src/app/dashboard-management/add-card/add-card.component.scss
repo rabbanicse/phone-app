@@ -1,0 +1,39 @@
+.form-main,
+.condition {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.field-expiry1 input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  color: #868686;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background: #e3edf7;
+  box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.6), inset 4px 4px 5px #c5d7ee;
+  border-radius: 4px;
+}
+
+.field-expiry {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+div.select-text{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+.field-dateTime{
+  display: grid;
+  grid-template-columns: 2fr;
+}
+.field-expiry1 {
+ width: 50%;
+}

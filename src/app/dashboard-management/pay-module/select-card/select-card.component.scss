@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+
+.slider,
+.slider-debit {
+  width: 90%;
+  left: 5%;
+  top: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.slider > ion-slides,
+.slider-debit > ion-slides {
+  position: relative;
+  top: 0px;
+  height: 245px;
+  background: #e3edf7;
+  box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.sliding-img-credit {
+  width: 40rem;
+}
+
+
+.slider_btn {
+  margin-top: 15px;
+}
+.slide-button-credit-manage,
+.slide-button-credit-pay {
+  height: 30px;
+  background: #e3edf7;
+  box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1), 4px 4px 20px rgba(111, 140, 176, 0.41);
+  border-radius: 100px;
+  font-size: 12px;
+  color: #1484ec;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+//Debit card design
+
+.slide-button-debit-manage {
+  position: absolute;
+  left: 5rem;
+  top: 12rem;
+  height: 30px;
+  background: #e3edf7;
+  box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1), 4px 4px 20px rgba(111, 140, 176, 0.41);
+  border-radius: 100px;
+  font-size: 12px;
+  color: #1484ec;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.slide-button-debit-pay {
+  position: absolute;
+  left: 10.5rem;
+  top: 12rem;
+  height: 30px;
+  background: #e3edf7;
+  box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1), 4px 4px 20px rgba(111, 140, 176, 0.41);
+  border-radius: 100px;
+  font-size: 12px;
+  color: #1484ec;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.debit-text,
+.credit-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.63);
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+
+.hint-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(94, 111, 206, 0.63);
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+}
+
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+$blue: #174395;
+$lightBlue: #ace4fa;
+$silver: #ececec;
+$space: 20px;
+
+body {
+  background: url(http://pmullen.com/codepen/h97pmPj.png) repeat;
+}
+
+
+.cc {  
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-radius: 20px;
+  height: 200px;
+  margin: 0.5rem;
+  overflow: hidden;
+  padding: 0.8rem;
+  position: relative;
+  width: 320px;
+}
+.swiper-slide:nth-child(even) .cc{
+  background: #4776E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.swiper-slide:nth-child(odd) .cc{
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  
+}
+.cc-debit {
+  top: -2.3rem;
+  background: $blue;
+  border-radius: 20px;
+  height: 170px;
+  left: 0.5rem;
+  margin: 0.5rem;
+  overflow: hidden;
+  padding: 0.8rem;
+  position: relative;
+  width: 270px;
+}
+
+.shine {
+  background: rgba(255, 255, 255, 0.05);
+  left: 190px;
+  top: 0;
+  margin: 0 15px 0 0;
+  padding: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(50deg);
+  -moz-transform: skew(50deg);
+  -ms-transform: skew(50deg);
+  -o-transform: skew(50deg);
+  transform: skew(50deg);
+}
+
+.shine-layer-two {
+  -webkit-transform: skew(80deg);
+  -moz-transform: skew(80deg);
+  -ms-transform: skew(80deg);
+  -o-transform: skew(80deg);
+  transform: skew(80deg);
+}
+
+.shine-layer-three {
+  transform: skew(40deg);
+}
+.cc h2 {
+  font: 18px Anaheim;
+  color: #fff;
+  margin: 5px 20px;
+  padding: 0 0 15px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+span {
+  text-transform: uppercase;
+}
+
+// .number,
+// .date {
+//   margin-bottom: $space/2;
+// }
+
+.provider {
+  display: inline-block;
+  margin: 0 $space/2 $space/2 0;
+  width: 0px;
+  height: 0px;
+}
+
+.mastercard,
+.visa,
+.amex {
+  background: url(https://forrit-cms-tb-prod-consumables.azureedge.net/media/6a230d8e-29ed-44c4-8ff7-dc6104df49cc/clubcard-plus-credit-card.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.amex {
+  background-position: 71px 0;
+}
+.visa {
+  background-position: 147px 0;
+}
+
+input {
+    background: none;
+    border: 0;
+    border-radius: 4px;
+    font: 20px Inconsolata, sans-serif;
+    
+    top: 0.1rem;
+    margin: 0.2rem;
+    padding: 0px;
+    text-align: center;
+    width: 19%;
+    box-shadow: none;
+    position: relative;
+    font-size:18px;
+}
+.card-logo{
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+.card-logo img{
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+.number, .chip-day{
+  padding:3px 5px 0;
+  display: flex;
+}
+.number span{
+  font: 20px Inconsolata, sans-serif;
+  color: #fff;
+  width: 100%;
+  margin: 10px;
+}
+.chip-day div{
+  color: #fff;
+  width: 100%;
+  margin:0 10px;
+}
+.dayleft{
+  text-align: right;
+}
+.dayleft .day-box {
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px;
+}
+.chip{
+  text-align: left;
+  padding-top: 5px;
+}
+.valid-div, .cvv{
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+.cvv{
+  left: 140px;
+}
+.valid-div span, .cvv span{
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.date{
+  font: 18px Anaheim, sans-serif;
+  color: #fff;
+}
+.days{
+  font-size: 15px;
+}
+::placeholder{
+  color: #fff;
+}
+
+
+.full-name {
+  width: 100%;
+  text-align: left;
+}
+
+.instructions {
+  letter-spacing: 1px;
+  font: 12px Anaheim, sans-serif;
+  color: $lightBlue;
+}
+
+.swiper-slide:nth-child(even) .debit{
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  
+}
+.swiper-slide:nth-child(odd) .debit{
+
+  background: #5f2c82;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}

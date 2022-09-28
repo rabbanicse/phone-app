@@ -1,0 +1,44 @@
+<ion-content>
+
+  <div  class="forgetPass">
+    <section class="heading-main">
+      <h2>Change Pin</h2>
+    </section>
+    <section class="form-main">
+      <form [formGroup]="changePinForm" (ngSubmit)="onSubmitForChangePin()">
+        <div class="field">
+          <input type="password" formControlName="oldPassword" placeholder="Old Password"/>
+          <ion-text color="danger"  *ngIf="isSubmitted && this.changePinForm.controls.oldPassword.errors?.required">
+           Old Password is required.
+          </ion-text>
+          <ion-text color="danger"  *ngIf="isSubmitted && this.changePinForm.controls.oldPassword.errors?.minlength">
+           Old Password at least 4 digits.
+          </ion-text>
+        </div>
+        <div class="field">
+          <input type="password" formControlName="newPassword" placeholder="New Password"/>
+          <ion-text color="danger"  *ngIf="isSubmitted && this.changePinForm.controls.newPassword.errors?.required">
+            New Password is Required.
+          </ion-text>
+          <ion-text color="danger"  *ngIf="isSubmitted && this.changePinForm.controls.newPassword.errors?.MustMatch">
+            Password Didn't Match
+          </ion-text>
+        </div>
+        <div class="field">
+          <input type="password" formControlName="confirmPassword" placeholder="Confirm Password"/>
+          <ion-text color="danger"  *ngIf="isSubmitted && this.changePinForm.controls.confirmPassword.errors?.required">
+            Confirm Password is required.
+          </ion-text>
+        </div>
+        <br>
+        
+        <ion-button type="submit" color="default" class="login-btn">
+          <span>Submit</span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+
+      </form>
+    </section>
+  </div>
+
+</ion-content>

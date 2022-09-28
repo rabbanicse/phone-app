@@ -1,0 +1,30 @@
+<div class="dashboard">
+  <app-application-header [applicationHeader]="headerText"></app-application-header>
+</div>
+
+<div class="payment-message-main" >
+  <div class="payment-message-second" >
+    <ion-label class="payment-message-icon">
+      <img src="/assets/icon/success.png" alt="nid-upload icon not found"><br><br>
+      <span>{{ message.title | translate}}</span> <br> <br>
+      <div class="completed">
+        {{ message.desc | translate}}
+      </div>
+    </ion-label>
+  </div>
+
+
+</div>
+
+
+<!-- <div class="payment-message-main">
+  <div class="payment-message-second">
+    <ion-label class="payment-message-icon">
+      <img src="/assets/icon/success.png" alt="nid-upload icon not found"><br><br>
+      <span>{{'paymentMessagePage.cardAddedSuccessfull' | translate}}</span> <br> <br>
+      <div class="completed">
+        {{'paymentMessagePage.cardAddedCongratulations' | translate}}
+      </div>
+    </ion-label>
+  </div>
+</div> -->

@@ -1,0 +1,25 @@
+<ion-content>
+
+  <div>
+    <section class="heading-main">
+      <h2>Email Verification</h2>
+    </section>
+    <section class="form-main">
+      <form [formGroup]="emailVerifiedForm" (ngSubmit)="onSubmitemailVerified()">
+
+        <div class="field">
+          <input type="text" formControlName="emailaddress" placeholder="Email Address"/>
+        </div>
+        <br/>
+  <!--      {{useremaildata?.data?.email || ''}}-->
+
+        <ion-button type="submit" color="default" class="login-btn">
+          <span>Submit</span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </form>
+    </section>
+  </div>
+
+</ion-content>
+

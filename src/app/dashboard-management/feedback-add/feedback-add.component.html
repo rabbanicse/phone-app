@@ -1,0 +1,81 @@
+<ion-content scroll="true">
+  <app-application-header
+    [applicationHeader]="headerText"
+  ></app-application-header>
+  <section class="form-main">
+    <form 
+      [formGroup]="feedbackForm"
+      (ngSubmit)="createFeedBack()">
+      <div class="field">
+        <span for="">Topic</span>
+          <ion-select formControlName="topic" (ionChange)="getTopic($event)">
+            <ion-select-option value=""> Please Select</ion-select-option>
+            <ion-select-option value="Payment">Payment</ion-select-option>
+            <ion-select-option value="Refund">Refund</ion-select-option>
+            <ion-select-option value="Suport">Suport</ion-select-option>
+          </ion-select>
+          <ion-text
+          color="danger"
+          *ngIf="
+            isSubmitted && this.feedbackForm.controls.topic.errors?.required
+          "
+        >
+          Topic is required.
+        </ion-text>
+      </div>
+
+      <div class="field">
+        <span for="">Subject</span>
+        <input type="text" formControlName="subject"/>
+
+         <ion-text
+          color="danger"
+          *ngIf="
+            isSubmitted && this.feedbackForm.controls.subject.errors?.required
+          "
+        >
+          Subject is required.
+        </ion-text>
+
+      </div>
+
+      <div class="field">
+        <span for="">Message</span>
+        <textarea formControlName="message"></textarea>
+        <ion-text
+          color="danger"
+          *ngIf="
+            isSubmitted && this.feedbackForm.controls.message.errors?.required
+          "
+        >
+          Message is required.
+        </ion-text>
+      </div>
+
+      <div class="field">
+        <span for="">File</span>
+        <input
+          type="file"
+          formControlName="attachment"
+          (change)="onSelectImage($event)"
+        />
+        <!-- <ion-text
+          color="danger"
+          *ngIf="
+            isSubmitted &&
+            this.feedbackForm.controls.attachment.errors?.required
+          "
+        >
+          Attachment is required.
+        </ion-text> -->
+      </div>
+
+      <div class="next-main-div">
+        <ion-button type="submit" color="default" class="next-btn">
+          <span>SEND MESSAGE</span>
+          <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+        </ion-button>
+      </div>
+    </form>
+  </section>
+</ion-content>

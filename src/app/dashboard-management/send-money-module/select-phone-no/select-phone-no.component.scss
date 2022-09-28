@@ -1,0 +1,89 @@
+.select-number{
+  padding:20px;
+}
+
+
+.enter-number{
+  position: relative;
+}
+
+.contact-details{
+  padding: 20px;
+}
+.amount span{
+  padding: 3px 5px;
+  background: #fff;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 2px;
+  border: 1px solid #cdd1e0;
+  width: 17%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #475278 ;
+}
+.person-details .item{
+  color: #475278 ;
+  font-size: 14px;
+}
+.person-details img{
+  border: 2px solid #fff;
+}
+.person-details .item span{
+  color: #8d96b3 ;
+}
+.next-main-div {
+  position: relative;
+
+}
+
+
+.send-money {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+ion-segment {
+  --background: #E3EDF7;
+  box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.6), inset 4px 4px 5px #C5D7EE;
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.send-money div{
+    background: #E3EDF7;
+    box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.6), inset 4px 4px 5px #C5D7EE;
+    border-radius: 20px;
+}
+.send-money button{
+    background: none;
+    padding: 15px 30px;
+    font-size: 14px;
+    color: #444;
+}
+.send-money button.btn-active, ion-segment-button.segment-button-checked{
+    background: #E3EDF7;
+    box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1), -6px -6px 20px #FFFFFF, 4px 4px 20px rgba(111, 140, 176, 0.41);
+    border-radius: 100px;
+    z-index: 9;
+    position: relative;
+}
+
+.numberDetails {
+  font-size: 13px;
+  margin-top: 6px;
+  
+}
+
+.numberDetails table th{
+text-align: left;
+padding:5px;
+color: #8097AB;
+font-weight: normal;
+}
+

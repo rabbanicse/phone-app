@@ -1,0 +1,24 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div
+    class="template box-shadow"
+    *ngFor="let item of rentSlipList"
+    (click)="goToTenantPreview(item)"
+  >
+    <!-- <h3>From: {{ userdata.data?.userName }}</h3> -->
+    <h3>To: {{ item.tenantsName }}</h3>
+    <div>Rent for {{item.monthName}}, {{ item.year }}</div>
+    <div class="total-amount">
+      <span>Total</span> <span>{{ item.totalRent }}</span>
+    </div>
+    <div class="templ-right"></div>
+  </div>
+  <!-- <div class="template box-shadow" [routerLink]="['/dashboard/rent/tenant-preview']">
+    <h3>Template Name</h3>
+    <div>Rent for July, 2022</div>
+    <div class="total-amount"><span>Total</span> <span>25000</span> </div>
+    <div class="templ-right"></div>
+  </div> -->
+  <br>
+  <br><br>
+</ion-content>

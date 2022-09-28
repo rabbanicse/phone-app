@@ -1,0 +1,30 @@
+
+.transaction{
+    width: 90%;
+    margin: auto;
+    padding-top: 0px;
+}
+.title{
+    color: #5A6E81;
+    text-transform: uppercase;
+}
+.trans-item {
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    padding: 5px 0;
+    font-size: 13px;
+}
+.trans-item div{
+    float: left;
+    width: 50%;
+}
+.right-text{
+    text-align: right;
+}
+.trans-item span{
+    display: block;
+    color:#5A6E81;
+}
+div span.blue-text {
+    color: #384FC9;
+}

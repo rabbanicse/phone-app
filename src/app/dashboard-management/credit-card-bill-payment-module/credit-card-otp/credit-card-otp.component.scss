@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+
+.otp-main-div h6 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.otp-main-div {
+  background: #e3edf7;
+  box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  left: 5%;
+  width: 90%;
+  text-align: center;
+  padding: 25px;
+  position: relative;
+  padding: 25px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.input_otp {
+  text-align: center;
+  margin: 20px 0;
+}
+.input_otp input {
+  width: 20%;
+  height: 35px;
+  border: 1px solid #a1a1a1;
+  margin: 5px;
+  background: #e3edf7;
+    box-shadow: inset -4px -4px 9px rgb(255 255 255 / 60%), inset 4px 4px 5px #c5d7ee;
+    text-align: center;
+}
+.resend{
+  display:block;
+}
+.next-main-div{
+padding:0 5% ;
+}
+.otp-msg{
+  color: red;
+  text-align: center;
+}

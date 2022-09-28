@@ -1,0 +1,40 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+
+  <div class="nid-first-div">
+    <div class="nid-front-page">
+      <ion-label class="nid-front-page-label" (click)="takeNidFrontPicture()">
+        <div *ngIf="!nidFrontPicture">
+          <img src="/assets/icon/camera.svg" alt="nid-upload icon not found"><br><br>
+          <span>{{'nidScanPage.captureFrontPage' | translate}}</span>
+        </div>
+        <div *ngIf="nidFrontPicture">
+          <ion-img [src]="nidFrontPicture"></ion-img>
+        </div>
+
+      </ion-label>
+    </div>
+  </div>
+
+  <div class="nid-second-div">
+    <div class="nid-back-page">
+      <ion-label class="nid-front-page-label" (click)="takeNidBackPicture()">
+        <div *ngIf="!nidBackPicture">
+          <img src="/assets/icon/camera.svg" alt="nid-upload icon not found"><br><br>
+          <span>{{'nidScanPage.captureBackPage' | translate}}</span>
+        </div>
+        <div *ngIf="nidBackPicture">
+          <ion-img [src]="nidBackPicture"></ion-img>
+        </div>
+
+      </ion-label>
+    </div>
+  </div>
+
+  <div class="next-main-div">
+    <ion-button color="default" (click)="gotoDetailsPage()" class="next-btn">
+      <span>{{'nidScanPage.next' | translate}}</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

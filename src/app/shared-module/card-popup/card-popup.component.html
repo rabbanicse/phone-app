@@ -1,0 +1,53 @@
+<div class="slider-debit" style="align-items: center">
+      <div class="cc debit">
+        <h2>Card Name</h2>
+        <div class="chip-day">
+        <div class="chip">
+          <img src="/assets/chip.png" class="img-center"/>
+        </div>
+      </div>
+        <!-- card number -->
+        <div class="number">
+          <span>1234</span>
+          <span>5678</span>
+          <span>1234</span>
+          <span>5678</span>
+          <!-- {{item.cardNumber}}-->
+        </div>
+
+        <!-- valid / ccv -->
+        <div class="date">
+          <div class="valid-div">
+            <span class="instructions valid">{{'cardPage.validThru' | translate}}</span>
+            <span class="date">{{21/03/2024  | date: 'MM/yy'}}</span>
+          </div>
+        </div>
+
+
+        <div class="card-logo">
+          <img src="/assets/visa-white.png" class="img-center"/>
+        </div>
+
+        <!-- shine -->
+        <div class="shine"></div>
+        <div class="shine shine-layer-two"></div>
+      </div>
+      <br>
+
+</div>
+
+<div class="condition">
+  <ion-text class="condition-text" color="secondary">
+    <ion-checkbox  class="condition-checkbox"></ion-checkbox>
+    {{'addCardPage.condition' | translate}}
+    <a href="http://" target="_blank" rel="noopener noreferrer"
+       class="condition-link">{{'addCardPage.terms' | translate}}</a>
+  </ion-text>
+</div>
+
+
+<div class="next-main-div">
+  <ion-button color="default" (click)="confirm()" class="next-btn"><span>{{'PAY NOW' | translate}}</span>
+    <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+</div>

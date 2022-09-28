@@ -1,0 +1,111 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content class="ion-padding">
+<section class="form-main2">
+  <form>
+    <!-- <div class="field-receiver">
+      <div>Pay From</div>
+      <div class="box-shadow select-card" (click)="payFromModal()" >
+        <span *ngIf="payFromCard !=null">
+          <div class="cc credit">
+            <h2>{{ payFromCard.cardName}}</h2>
+            <div class="chip-day">
+            <div class="chip">
+              <img src="/assets/chip.png" class="img-center"/>
+            </div>
+          </div>
+            <div class="number">
+              <span>1234</span>
+              <span>5678</span>
+              <span>1234</span>
+              <span>5678</span>
+            </div>
+            <div class="date">
+              <div class="valid-div">
+                <span class="instructions valid">{{'cardPage.validThru' | translate}}</span>
+                <span class="date">{{payFromCard.expiryDate  | date: 'MM/yy'}}</span>
+              </div>
+            </div>
+
+
+            <div class="card-logo">
+              <img src="/assets/visa-white.png" class="img-center"/>
+            </div>
+            <div class="shine"></div>
+            <div class="shine shine-layer-two"></div>
+          </div>
+        </span>
+
+        <div [hidden]="payFromCard">
+          <img src="/assets/add-card.png" class="img-center"/>
+          <div>Choose card to pay From</div>
+        </div>
+
+
+      </div>
+    </div> -->
+
+
+    <div class="field-receiver">
+      <div>Pay To</div>
+      <div class="box-shadow select-card" (click)="payToModal()">
+        <div *ngIf="payToCard !=null" class="">
+          <div class="cc debit">
+            <h2>{{ payToCard.cardName}}</h2>
+            <div class="chip-day">
+            <div class="chip">
+              <img src="/assets/chip.png" class="img-center"/>
+            </div>
+            <div class="dayleft"> <span class="day-box"> Day Left <br> <span class="days"> 30 </span></span></div>
+          </div>
+            <div class="number">
+              <span>{{payToCard.cardNumber | slice:0:4 }}</span>
+              <span>{{payToCard.cardNumber | slice:4:8 }}</span>
+              <span>{{payToCard.cardNumber | slice:8:12 }}</span>
+              <span>{{payToCard.cardNumber | slice:12:16 }}</span>
+            </div>
+            <div class="date">
+              <div class="valid-div">
+                <span class="instructions valid">{{'cardPage.validThru' | translate}}</span>
+                <span class="date">{{payToCard.expiryDate  | date: 'MM/yy'}}</span>
+              </div>
+            </div>
+
+
+            <div class="card-logo">
+              <img src="/assets/visa-white.png" class="img-center"/>
+            </div>
+            <div class="shine"></div>
+            <div class="shine shine-layer-two"></div>
+          </div>
+        </div>
+        <div [hidden]="payToCard" class="card-div">
+          <img src="/assets/add-card.png" class="img-center"/>
+          <div>Choose card for bill payment</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="field">
+      <span>Amount</span>
+      <div>
+        <input type="number" placeholder="Enter Amount" />
+      </div>
+    </div>
+  </form>
+</section>
+<div class="condition">
+  <ion-text class="condition-text" color="secondary">
+    <ion-checkbox  class="condition-checkbox"></ion-checkbox>
+    {{'addCardPage.condition' | translate}}
+    <a href="http://" target="_blank" rel="noopener noreferrer"
+       class="condition-link">{{'addCardPage.terms' | translate}}</a>
+  </ion-text>
+</div>
+<div class="next-main-div">
+  <ion-button color="default"
+              [routerLink]="['/bill-pay/credit-card-otp']"
+              class="next-btn"><span>{{'addCardPage.next' | translate}}</span>
+    <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+</div>
+</ion-content>

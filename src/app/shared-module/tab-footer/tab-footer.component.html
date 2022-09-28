@@ -1,0 +1,37 @@
+<!-- Down Tab Bar -->
+<div class="bottomTabbar">
+  <ion-tabs class="tabBar">
+    <ion-tab-bar slot="bottom" class="bottomNav">
+      <ion-tab-button tab="chat" (click)="notFunctional()">
+        <img src="/assets/icon/chat.svg">
+        <ion-label>{{'tabFooter.chat' | translate}}</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button [routerLink]="['/dashboard/card']">
+        <img src="/assets/icon/card.svg">
+        <ion-label>{{'tabFooter.cards' | translate}}</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button [routerLink]="['/dashboard/pay/select-pay-card']" class="pay">
+        <span><img src="/assets/icon/pay.svg"></span>
+        <ion-label>{{'tabFooter.pay' | translate}}</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button [routerLink]="['/dashboard/send-money/select-phone-no']">
+        <img src="/assets/icon/send_money.svg">
+        <ion-label>{{'tabFooter.sendMoney' | translate}}</ion-label>
+      </ion-tab-button>
+
+     <!-- <ion-tab-button [routerLink]="['scan/scan']">
+        <img src="/assets/icon/scan.svg">
+        <ion-label>{{'tabFooter.scan' | translate}}</ion-label>
+      </ion-tab-button>-->
+
+      <ion-tab-button (click)="startScan()" [hidden]="scanActive" [routerLink]="['scan/scan']">
+          <img src="/assets/icon/scan.svg">
+        <ion-label>{{'tabFooter.scan' | translate}}</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</div>

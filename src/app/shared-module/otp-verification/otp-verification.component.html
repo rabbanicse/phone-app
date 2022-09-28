@@ -1,0 +1,41 @@
+<div class="dashboard">
+  <app-application-header [applicationHeader]="headerText"></app-application-header>
+</div>
+
+<!-- OTP Verify -->
+
+<ion-content>
+  <div class="otp-main-div">
+
+    <div class="biling-details">
+      <!-- <h2>Pizza Hut, Dhanmondi</h2>
+      <h5>wants payment for the amount</h5> -->
+      <!-- <div class="amount"> ৳3000.00</div> -->
+    </div>
+    <div class="otp-user-input">
+      <ion-label class="otp-text">
+        <img src="/assets/icon/otp.svg" class="img-center"/>
+        <h6>{{'otpVerificationPage.otpVerification' | translate}}</h6>
+        <span id="otp-sent">{{'otpVerificationPage.enterOtpCodeSentTo' | translate}}
+          <!-- <strong>01922560580</strong>   -->
+        </span>
+        <span id="otp-sent-number">{{customer?.mobileNumber  }}</span>
+      </ion-label>
+      <div class="input_otp">
+        <ng-otp-input  (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+      </div>
+      <ion-label class="otp-not-recieve-text">{{'otpVerificationPage.notRecieveOtpCode' | translate}}</ion-label>
+      <a  (click)="resendOtpFn()" class="resend">{{'otpVerificationPage.resendCode' | translate}}</a>
+    </div>
+
+  </div>
+  <h6 class="otp-msg" *ngIf="msg !== '' && isResendOtp === false"> {{msg}}</h6>
+  <h6 class="otp-success-msg" *ngIf="isResendOtp === true"> {{msg}}</h6>
+  <!-- Next Button -->
+  <div class="next-main-div">
+    <ion-button color="default" (click)="confirmOtp()" class="next-btn"><span>{{ 'Confirm' | translate}}</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<div class="dashboard">
+  <div class="dashboard-heading">
+    <div class="toggle-bar" >
+      <ion-icon class="toggle-icon" [routerLink]="['/dashboard']"></ion-icon>
+    </div>
+    <span>
+      <ion-label class="heading-text">
+      Phone A
+      </ion-label>
+    </span>
+    <div class="toggle-bar notification">
+      <ion-icon class="heading-notification"></ion-icon>
+    </div>
+  </div>
+</div>
+
+<div class="payment-message-main box-shadow" >
+  <div class="payment-message-second" >
+    <ion-label class="payment-message-icon">
+      <img src="/assets/icon/success.png" alt="icon not found">
+      <span>{{ message.title | translate}}</span>
+      <div class="completed">
+        {{ message.desc | translate}}
+      </div>
+    </ion-label>
+  </div>
+</div>
+
+

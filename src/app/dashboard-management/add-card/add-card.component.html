@@ -1,0 +1,122 @@
+<ion-content ><app-application-header [applicationHeader]="headerText"></app-application-header>
+
+<!--card input box  -->
+<ion-content>
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+  <section class="form-main">
+
+    <div class="field">
+      <span>{{'addCardPage.cardType' | translate}}</span>
+      <div>
+        <ion-select value="credit" formControlName="cardType">
+          <ion-select-option value=""> Please Select</ion-select-option>
+
+          <ion-select-option value="credit">Credit</ion-select-option>
+          <ion-select-option value="debit">Debit</ion-select-option>
+        </ion-select>
+      </div>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardType.errors?.required">
+        Type is required.
+      </ion-text>
+    </div>
+
+    <div class="field">
+      <span>{{'addCardPage.cardType' | translate}}</span>
+      <div class="input-label">
+        <ion-select formControlName="companyCardType">
+          <ion-select-option value=""> Please Select</ion-select-option>
+          <ion-select-option value="visa">Visa</ion-select-option>
+          <ion-select-option value="master">Master Card</ion-select-option>
+          <ion-select-option value="mx">Amex</ion-select-option>
+        </ion-select>
+      </div>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.companyCardType.errors?.required">
+        Type is required.
+      </ion-text>
+    </div>
+
+    <div class="field">
+      <span>{{'addCardPage.cardNumber' | translate}}</span>
+      <input formControlName="cardNumber" type="number" placeholder="{{'addCardPage.cardNumber' | translate}}"/>
+
+      <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardNumber.errors?.required">
+      Card Number is required.
+      </ion-text>
+    </div>
+    <div class="field">
+      <span>{{'addCardPage.name' | translate}}</span>
+      <input formControlName="cardName" type="text" placeholder="{{'addCardPage.name' | translate}}"/>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardName.errors?.required">
+        Card Name is required.
+      </ion-text>
+    </div>
+    <div class="field">
+      <span>{{'addCardPage.billingDate' | translate}}</span>
+      <input formControlName="billingDate" type="date" placeholder="{{'addCardPage.billingDate' | translate}}"/>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.billingDate.errors?.required">
+        Billing Date is required.
+      </ion-text>
+    </div>
+
+    <!-- <div class="field-dateTime">
+      <span>{{'addCardPage.monthYear' | translate}}</span>
+      <ion-datetime formControlName="monthYear" presentation="month-year" ></ion-datetime>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.monthYear.errors?.required">
+        monthYear is required.
+      </ion-text>
+    </div> -->
+
+    <div class="field-expiry">
+      <div class="field-expiry1">
+        <span>{{'addCardPage.expiry' | translate}}</span>
+        <input formControlName="expiryDate" type="date" placeholder="{{'addCardPage.expiry' | translate}}"/>
+        <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.expiryDate.errors?.required">
+          Expire Date is required.
+        </ion-text>
+      </div>
+      <div class="field-expiry1">
+        <span>{{'addCardPage.cvv' | translate}}</span>
+        <input formControlName="cvv"  type="number" placeholder="{{'addCardPage.cvv' | translate}}"/>
+        <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cvv.errors?.required">
+          CVV is required.
+        </ion-text>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- Condition -->
+
+
+  <!-- <div class="condition">
+    <ion-text class="condition-text" color="secondary">
+      <ion-checkbox (ionChange)="checkboxClick($event)" class="condition-checkbox"></ion-checkbox>
+      {{'addCardPage.condition' | translate}}
+      <a href="http://" target="_blank" rel="noopener noreferrer"
+         class="condition-link">{{'addCardPage.terms' | translate}}</a>
+    </ion-text>
+  </div> -->
+
+
+  <div class="condition">
+    <input type="checkbox" class="condition-checkbox" formControlName="acceptTerms" />
+    {{'addCardPage.condition' | translate}}
+    <a href="http://" target="_blank" rel="noopener noreferrer"
+       class="condition-link">{{'addCardPage.terms' | translate}}</a>
+    <br>
+    <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.acceptTerms.errors?.required">
+      Please Accept the conditions
+    </ion-text>
+    </div>
+
+  <!-- Next Button -->
+  <div class="next-main-div">
+    <ion-button color="default" type="submit" class="next-btn" >
+      <span>{{'addCardPage.next' | translate}}</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</form>
+</ion-content>

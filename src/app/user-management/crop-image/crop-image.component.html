@@ -1,0 +1,21 @@
+
+<ion-content>
+
+
+<image-cropper
+  [imageBase64]="image"
+  [maintainAspectRatio]="false"
+  [imageChangedEvent]="imageChangedEvent"
+  format="png"
+  (imageCropped)="imageCropped($event)"
+  [canvasRotation]="canvasRotation"
+  [transform]="transform"
+></image-cropper>
+
+<ion-button (click)="disMissModal()">Crop Image</ion-button>
+<br>
+<ion-button (click)="rotateLeft()">Rotate Left</ion-button>
+<ion-button (click)="rotateRight()">Rotate Right</ion-button>
+
+<!--<img [src]="croppedImage" />-->
+</ion-content>

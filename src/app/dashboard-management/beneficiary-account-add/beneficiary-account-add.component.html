@@ -1,0 +1,53 @@
+<ion-content scroll="true">
+  <app-application-header [applicationHeader]="headerText"></app-application-header>
+  <section class="form-main">
+    <form action="">
+      <div class="field">
+        <span for="">Beneficiary Type</span>
+          <ion-select >
+            <ion-select-option value=""> Please Select</ion-select-option>
+            <ion-select-option value="visa">Visa</ion-select-option>
+            <ion-select-option value="master">Master Card</ion-select-option>
+            <ion-select-option value="mx">Amex</ion-select-option>
+          </ion-select>
+      </div>
+
+      <div class="field">
+        <span for="">Name of Account Holder</span>
+        <input type="text">
+      </div>
+
+      <div class="field">
+        <span for="">Bank Name</span>
+          <ion-select >
+            <ion-select-option value=""> Please Select</ion-select-option>
+            <ion-select-option value="brac">Brac Bank Limited</ion-select-option>
+            <ion-select-option value="city">City Bank Limited</ion-select-option>
+            <ion-select-option value="dbbl">Duch Bangla Bank Limited</ion-select-option>
+          </ion-select>
+      </div>
+
+      <div class="field">
+        <span for="">Branch</span>
+          <ion-select >
+            <ion-select-option value=""> Please Select</ion-select-option>
+            <ion-select-option value="b">Banani</ion-select-option>
+            <ion-select-option value="d">Dhanmondi</ion-select-option>
+            <ion-select-option value="m">Mirpur</ion-select-option>
+          </ion-select>
+      </div>
+
+      <div class="field">
+        <span for="">Account No</span>
+        <input type="number">
+      </div>
+
+      <div class="next-main-div">
+        <ion-button type="submit" color="default" class="next-btn">
+          <span>ADD BENEFICIARY</span>
+          <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+        </ion-button>
+      </div>
+    </form>
+    </section>
+</ion-content>

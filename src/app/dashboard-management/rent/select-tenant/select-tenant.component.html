@@ -1,0 +1,54 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div class="select-number box-shadow">
+    <div class="enter-number">
+      <h3>Enter mobile no/select from contacts</h3>
+      <input type="number" placeholder="+88" />
+      <!-- <h1>{{rentSlip.tenantsName}}</h1> -->
+
+      <div class="numberDetails" *ngIf="isContactShow">
+        <table border="0">
+          <tr>
+            <th>Name</th>
+            <td>:</td>
+            <td>{{rentSlip.tenantsName}}</td>
+          </tr>
+          <tr>
+            <th>Mobile No</th>
+            <td>:</td>
+            <td>{{rentSlip.tenantsId}}</td>
+          </tr>
+          </table>
+          </div>
+
+      <div class="contact-icon">
+        <a (click)="getContacts()">
+          <img src="/assets/icon/contact.svg"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-details box-shadow">
+    <!-- <input type="search" [(ngModel)]="mobileNumber"> -->
+    <h3>RECENT CONTACTS</h3>
+    <div class="contact-details-list">
+      <div class="person-details" class="profile-details" *ngFor="let contact of contacts | async">
+        <ion-item (click)="selectTenant(contact)">
+          <ion-avatar slot="start">
+            <img src="/assets/icon/prof_pic.jpg" />
+          </ion-avatar>
+          <ion-label >{{ contact.displayName }} <br />
+            <span *ngFor="let item of contact.phoneNumbers" (click)="selectTenantNumber(item)">{{ item.number }}</span></ion-label
+          >
+        </ion-item>
+      </div>
+    </div>
+  </div>
+  <div class="next-main-div">
+    <ion-button color="default" (click)="saveRentSlip()" class="next-btn">
+      <span>{{ "sendMoneyPage.next" | translate }}</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

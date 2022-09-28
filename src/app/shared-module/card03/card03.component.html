@@ -1,0 +1,119 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+
+<ion-content >
+<div class="slider box-shadow" style="align-items: center" scrollY="true">
+      <div class="cc">
+        <h2>  {{ card.cardName}}</h2>
+        <div class="chip-day">
+          <div class="chip">
+            <img src="/assets/chip.png" class="img-center"/>
+          </div>
+          <div class="dayleft"> <span class="day-box"> Day Left <br> <span class="days"> 30 </span></span></div>
+        </div>
+        <div class="number">
+          <span>{{card.cardNumber | slice:0:4 }}</span>
+          <span>{{card.cardNumber | slice:4:8 }}</span>
+          <span>{{card.cardNumber | slice:8:12 }}</span>
+          <span>{{card.cardNumber | slice:12:16 }}</span>
+        </div>
+
+        <div class="date">
+          <div class="valid-div">
+            <span class="instructions valid">   {{'cardPage.validThru' | translate}}</span>
+            <span class="date"> {{card.expiryDate  | date: 'MM/yy'}}</span>
+          </div>
+        </div>
+        <div class="card-logo">
+          <img src="/assets/visa-white.png" class="img-center"/>
+        </div>
+
+        <div class="shine"></div>
+        <div class="shine shine-layer-two"></div>
+    </div>
+    <div class="card-details">
+      <div>
+        <span>Total Limit</span>
+        <span class="blue-text">200,000</span>
+      </div>
+      <div>
+        <span>Total Due</span>
+        <span class="blue-text">200,000</span>
+      </div>
+      <div>
+        <span>Mis Due</span>
+        <span class="blue-text">200,000</span>
+      </div>
+      <div>
+        <span>Last Billing Date</span>
+        <span class="blue-text">10/12/2022</span>
+      </div>
+      <div class="no-border">
+        <span>Reward Point</span>
+        <span class="blue-text">200,000</span>
+      </div>
+      <div class="no-border">
+        <span>Make default Card</span>
+        <ion-toggle color="primary"></ion-toggle>
+
+      </div>
+  </div>
+</div>
+<div class="transaction">
+    <h5 class="title">Recent Transaction</h5>
+    <div class="trans-item">
+      <div>
+        <span class="blue-text">Send Money</span>
+        <span>01922530560</span>
+      </div>
+      <div class="right-text">
+        <span class="blue-text">15400</span>
+        <span>10/08/2022 | 5.06pm</span>
+      </div>
+    </div>
+
+    <div class="trans-item">
+      <div>
+        <span class="blue-text">Send Money</span>
+        <span>01922530560</span>
+      </div>
+      <div class="right-text">
+        <span class="blue-text">15400</span>
+        <span>10/08/2022 | 5.06pm</span>
+      </div>
+    </div>
+
+    <div class="trans-item">
+      <div>
+        <span class="blue-text">Send Money</span>
+        <span>01922530560</span>
+      </div>
+      <div class="right-text">
+        <span class="blue-text">15400</span>
+        <span>10/08/2022 | 5.06pm</span>
+      </div>
+    </div>
+
+    <div class="trans-item">
+      <div>
+        <span class="blue-text">Send Money</span>
+        <span>01922530560</span>
+      </div>
+      <div class="right-text">
+        <span class="blue-text">15400</span>
+        <span>10/08/2022 | 5.06pm</span>
+      </div>
+    </div>
+
+    <div class="trans-item">
+      <div>
+        <span class="blue-text">Send Money</span>
+        <span>01922530560</span>
+      </div>
+      <div class="right-text">
+        <span class="blue-text">15400</span>
+        <span>10/08/2022 | 5.06pm</span>
+      </div>
+    </div>
+</div>
+</ion-content>
+

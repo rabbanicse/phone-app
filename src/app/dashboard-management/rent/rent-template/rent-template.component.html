@@ -1,0 +1,26 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div *ngIf="isemptyMsg" class="box-shadow msg">
+    
+    <h6 >{{emptyTemplateMsg}}</h6>
+   
+   
+  </div>
+  <div class="template box-shadow" *ngFor="let item of templateList" [routerLink]="['/dashboard/rent/edit-template/update/',item.id]">
+    <h3>{{item.templateName}}</h3>
+    <div>Rent for {{item.monthName}}, {{item.year}}</div>
+    <div class="total-amount"><span>Total</span> <span>{{item.totalRent}}</span> </div>
+    <div class="templ-right"></div>
+  </div>
+  <!-- <div class="template box-shadow" [routerLink]="['/dashboard/rent/edit-template']">
+    <h3>Template Name</h3>
+    <div>Rent for July, 2022</div>
+    <div class="total-amount"><span>Total</span> <span>25000</span> </div>
+    <div class="templ-right"></div>
+  </div> -->
+  <div class="next-main-div">
+    <ion-button color="default" class="next-btn" [routerLink]="['/dashboard/rent/edit-template']"><span>Add Template</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

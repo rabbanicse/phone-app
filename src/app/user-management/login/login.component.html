@@ -1,0 +1,50 @@
+<div class="login-main">
+  <section class="heading-main">
+    <h2> <img src="/assets/logo.svg" /></h2>
+  </section>
+  <section class="form-main">
+    <div class="text">{{'loginPage.loginText' | translate}}</div>
+    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+      <!-- <div class="field">
+        <input type="text" placeholder="{{'loginPage.emailorPhone' | translate}}" formControlName="mobileNumber"
+          class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors }" />
+        <span *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
+          <span *ngIf="f.mobileNumber.errors.required">Mobile Number is required</span>
+        </span>
+      </div> -->
+
+      <div class="field">
+        <input formControlName="mobileNumber" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="{{'loginPage.emailorPhone' | translate}}"/>
+      </div>
+      <ion-text color="danger" *ngIf="submitted && this.loginForm.controls.mobileNumber.errors?.required">
+        Mobile Number is Required
+      </ion-text>
+
+      <!-- <div class="field">
+        <input type="password" placeholder="{{'loginPage.password' | translate}}" formControlName="pin"
+          class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pin.errors }" />
+        <span *ngIf="submitted && f.pin.errors" class="invalid-feedback">
+          <span *ngIf="f.pin.errors.required">Mobile Number is required</span>
+        </span>
+      </div> -->
+
+      <div class="field">
+        <input formControlName="pin" type="password" pattern="[0-9]*" inputmode="numeric" placeholder="{{'loginPage.password' | translate}}"/>
+      </div>
+      <ion-text color="danger" *ngIf="submitted && this.loginForm.controls.pin.errors?.required">
+        Password is Required
+      </ion-text>
+
+      <div class="forgot" [routerLink]="['/forgot-password']">Forgot Password?</div>
+      <br/>
+      <ion-button type="submit" color="default" class="login-btn">
+        <span>{{'loginPage.loginButton' | translate}}</span>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="default" class="registration-btn" [routerLink]="['/registration']">
+        <span>{{'loginPage.registration' | translate}}</span>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </form>
+  </section>
+</div>

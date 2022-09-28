@@ -1,0 +1,198 @@
+<ion-menu side="start" menuId="first" content-id="main-content" >
+
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>{{ "dashboardPage.menu" | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="side-menu">
+          <!--
+    <ion-list>
+      <ion-item>
+        <ion-label>{{ "dashboardPage.themeChange" | translate }}</ion-label>
+        <ion-toggle
+          slot="start"
+          (ionChange)="onTogggleThemeChange($event)"
+          name="theme"
+        ></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{ "dashboardPage.language" | translate }}</ion-label>
+        <ion-toggle
+          slot="start"
+          (ionChange)="switchLanguage($event)"
+          name="theme"
+        ></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+-->
+
+    <div class="profile box-shadow">
+      <div class="profile-pic">
+        <img src="/assets/icon/prof_pic.jpg" />
+      </div>
+      <!--        <img src="/assets/icon/prof_pic.jpg" />-->
+    <div class="profile-details"  [routerLink]="['/dashboard/user-info/user-personal-info']">
+      <div class="profile-name">{{userdata.data?.userName || ''}}</div>
+      <div class="profile-mobile">{{userdata?.data?.mobileNo || ''}}</div>
+    </div>
+    <div class="verify">Verified</div>
+  </div>
+  <h4>{{"userOverviewPage.menu" | translate}}</h4>
+  <div class="left-menu box-shadow">
+    <ul>
+      <li><a [routerLink]="['/my-account']"><span class="menu-icon" ><img src="/assets/icon/calendar.svg"/></span> <span>{{ "userOverviewPage.myAccount" | translate }}</span></a>
+      </li>
+
+      <li><a  [routerLink]="['/beneficiary-management']"><span class="menu-icon"><img src="/assets/icon/settings.svg"/></span> <span>{{"userOverviewPage.beneficiaryManagement" | translate}}</span></a>
+      </li>
+
+      <li><a  [routerLink]="['/transaction-report']"><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span> <span>{{"userOverviewPage.transactionReport" | translate}}</span></a>
+      </li>
+      <li><a  [routerLink]="['/feedback']"><span class="menu-icon" ><img src="/assets/icon/bookmark.svg"/></span>
+        <span >{{"userOverviewPage.feedback" | translate}}</span></a></li>
+        <li><a (click)="notFunctional()"><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span> <span>{{"userOverviewPage.rewardPoint" | translate}}</span></a>
+        </li>
+        <li><a  (click)="notFunctional()"><span class="menu-icon" ><img src="/assets/icon/bookmark.svg"/></span>
+          <span >{{"userOverviewPage.faq" | translate}}</span></a></li>
+    </ul>
+  </div>
+  <h4>{{"userOverviewPage.setting" | translate}}</h4>
+  <div class="left-menu box-shadow">
+    <ul>
+      <li class="no-arrow toggle-btn"><a ><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span>
+        <span>{{ "dashboardPage.language" | translate }} <ion-toggle
+          slot="start"
+          (ionChange)="switchLanguage($event)"
+          name="theme"
+        ></ion-toggle></span></a>
+      </li>
+      <li class="no-arrow toggle-btn"><a ><span class="menu-icon"><img src="/assets/icon/settings.svg"/></span>
+        <span>{{ "dashboardPage.themeChange" | translate }}
+          <ion-toggle
+            slot="start"
+            (ionChange)="onTogggleThemeChange($event)"
+            name="theme"
+          ></ion-toggle> </span></a></li>
+      <li><a ><span class="menu-icon"><img src="/assets/icon/calendar.svg"/></span>
+        <span [routerLink]="['/change-password']">{{"userOverviewPage.changePasword" | translate}}</span></a></li>
+      <li><a ><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span>
+        <span (click)="logout()">{{"userOverviewPage.logout" | translate}}</span></a></li>
+    </ul>
+  </div>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons class="ion-menu-button">
+      <a
+      ><span (click)="openMenu()" ><img src="/assets/icon/menu.svg" /></span></a
+      >
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-icon class="heading-notification"></ion-icon>
+      </ion-buttons>
+
+      <ion-title class="heading-text">{{ "dashboardPage.headerText" | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div class="home-top-icon">
+      <a (click)="notFunctional()"
+      ><img src="/assets/icon/profile.svg" /><span>SHARE BILL</span>
+    </a>
+      <a (click)="notFunctional()"
+        ><img src="/assets/icon/profile.svg" /><span>MINI SHOP</span></a
+      >
+      <a   [routerLink]="['/dashboard/rent/rent-page']"
+        ><img src="/assets/icon/offer.svg" /><span>RENT PAY</span></a
+      >
+      <a  (click)="notFunctional()"
+        ><img src="/assets/icon/pos.svg" /><span>{{
+          "dashboardPage.pos" | translate
+        }}</span></a
+      >
+      <a
+        ><span [routerLink]="['/dashboard/req-money/select-receiver']"><img src="/assets/icon/req_money.svg" /><span>{{
+          "dashboardPage.reqMoney" | translate
+        }}</span></span></a
+      >
+    </div>
+    <!-- Banner Part -->
+    <div class="banner">
+      <ion-thumbnail class="banner-image">
+        <!-- <img src="/src/assets/banner.jpg"> -->
+        <img src="/assets/icon/banner.png" />
+      </ion-thumbnail>
+    </div>
+
+    <!-- Link Button -->
+
+    <div class="link-button">
+      <ion-grid>
+        <ion-row>
+          <ion-segment  scrollable>
+          <ion-col>
+            <span (click)="notFunctional()">{{ "dashboardPage.apps" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span [routerLink]="['/dashboard/mobile-recharge']">{{ "dashboardPage.mobileRecharge" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span [routerLink]="['/dashboard/bill-pay/credit-card']">{{ "dashboardPage.billPay" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span (click)="notFunctional()">{{ "dashboardPage.shopping" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span (click)="notFunctional()">{{ "dashboardPage.tution" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span (click)="notFunctional()"> {{ "dashboardPage.food" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span (click)="notFunctional()"> {{ "dashboardPage.food" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span (click)="notFunctional()"> {{ "dashboardPage.food" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span (click)="notFunctional()"> {{ "dashboardPage.food" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <span (click)="notFunctional()"> {{ "dashboardPage.food" | translate }}</span>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="search"></ion-icon>
+          </ion-col>
+          </ion-segment>
+        </ion-row>
+
+      </ion-grid>
+    </div>
+
+    <!-- Slider Part -->
+    <div class="slider" style="align-items: center">
+      <ion-slides [options]="{ slidesPerView: true, loop: true }">
+        <ion-slide
+          class="sliding-img"
+          *ngFor="let item of promotionalOfferList"
+        >
+         <h4>New Way To Pay</h4>
+          <img src="{{ item.imageUrl }}" />
+          <ion-button
+            color="light"
+            [routerLink]="['/dashboard/promotional-offer']"
+            >Read More</ion-button
+          >
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <app-tab-footer></app-tab-footer>
+  </ion-content>
+</div>

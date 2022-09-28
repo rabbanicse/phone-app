@@ -1,0 +1,92 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+
+<!--card input box  -->
+<ion-content>
+<form [formGroup]="rentForm" (ngSubmit)="templateSaveOrUpdate()">
+  <section class="form-main">
+
+    <div class="field">
+      <span>Template Name</span>
+      <input formControlName="templateName" type="text" placeholder="Template Name"/>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.rentForm.controls.templateName.errors?.required">
+        Template Name is required.
+      </ion-text>
+    </div>
+
+    <div class="field">
+      <span>Month</span>
+      <div class="input-label">
+        <ion-select formControlName="monthName" (ionChange)="getMonthValue($event)">
+          <ion-select-option value="">Please Select</ion-select-option>
+          <ion-select-option  *ngFor="let item of monthsNumber" value="{{item.monthName}}">{{item.monthName}}</ion-select-option>
+        </ion-select>
+      </div>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.rentForm.controls.monthName.errors?.required">
+        Month Name is required.
+      </ion-text>
+    </div>
+
+    <div class="field">
+      <span>Year</span>
+      <input formControlName="year" type="number" placeholder=""/>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.rentForm.controls.year.errors?.required">
+      Year is required.
+      </ion-text>
+    </div>
+
+    <div class="field">
+      <span>Rent</span>
+      <input formControlName="rent" type="number" placeholder=""/>
+      <ion-text color="danger"  *ngIf="isSubmitted && this.rentForm.controls.rent.errors?.required">
+      Rent amount is required.
+      </ion-text>
+    </div>
+    <div class="field">
+      <span>Water Bill</span>
+      <input formControlName="waterBill" type="number" placeholder=""/>
+      <!-- <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardName.errors?.required">
+        Card Name is required.
+      </ion-text> -->
+    </div>
+    <div class="field">
+      <span>Electric Bill</span>
+      <input formControlName="electricBill" type="number" placeholder=""/>
+      <!-- <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardName.errors?.required">
+        Card Name is required.
+      </ion-text> -->
+    </div>
+    <div class="field">
+      <span>Gas Bill</span>
+      <input formControlName="gasBill" type="number" placeholder=""/>
+      <!-- <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardName.errors?.required">
+        Card Name is required.
+      </ion-text> -->
+    </div>
+    <div class="field">
+      <span>Service Charge</span>
+      <input formControlName="serviceCharge" type="number" placeholder=""/>
+      <!-- <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardName.errors?.required">
+        Card Name is required.
+      </ion-text> -->
+    </div>
+    <div class="field">
+      <span>Others</span>
+      <input formControlName="others" type="number" placeholder=""/>
+      <!-- <ion-text color="danger"  *ngIf="isSubmitted && this.cardForm.controls.cardName.errors?.required">
+        Card Name is required.
+      </ion-text> -->
+    </div>
+  </section>
+
+  <!-- Condition -->
+
+  <!-- Next Button -->
+   <!-- Next Button -->
+   <div class="next-main-div">
+    <ion-button  color="default" type="submit" class="next-btn">
+      <span>NEXT</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</form>
+</ion-content>

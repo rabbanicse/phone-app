@@ -1,0 +1,29 @@
+.form-main,
+.condition {
+  width: 90%;
+  margin-left: 5%;
+}
+.condition {
+  margin-top: 15px;
+}
+
+.field-receiver input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  color: #868686;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background: #e3edf7;
+  //box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.6), inset 4px 4px 5px #c5d7ee;
+  border-radius: 4px;
+}
+.next-main-div {
+  padding: 0 5%;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  margin: 0;
+}

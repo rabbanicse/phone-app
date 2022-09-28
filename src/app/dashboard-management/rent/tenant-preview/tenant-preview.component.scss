@@ -1,0 +1,53 @@
+.template {
+    padding: 30px;
+    position: relative;
+}
+.template h3{
+    color: #475278;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+
+.templ-right{
+    width: 30px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border-left: 1px solid #ccc;
+    background: url(/assets/icon/arrow-right.svg) center center no-repeat;
+}
+.total-amount {
+    border-top: 1px solid #ccc;
+    display: flex;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-top: 15px;
+    
+}
+.total-amount span {
+    width: 50%;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+.total-amount span:last-child, .invoice-item span:last-child {
+    text-align: right;
+}
+.invoice{
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.invoice-item {
+    display: flex;
+    padding: 5px;
+}
+.invoice-item span {
+    width: 50%;    
+    color: #555;
+}
+
+
+

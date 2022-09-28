@@ -1,0 +1,35 @@
+
+<app-application-header></app-application-header>
+
+<!--card input box  -->
+
+<section class="form-main">
+  <form>
+    <div class="field-receiver">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <span>Receiver</span>
+      <div class="receiver-input">
+        <input type="text" placeholder="Jessica Sharoff(01912343433)" />
+      </div>
+    </div>
+
+    <div class="field">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <span>Amount</span>
+      <div>
+        <input type="text" placeholder="1500" />
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Next Button -->
+<div class="next-main-div">
+  <ion-button color="default"
+              [routerLink]="['/dashboard/send-money/select-payment-card']"
+
+
+              class="next-btn"><span>{{'addCardPage.next' | translate}}</span>
+    <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+</div>

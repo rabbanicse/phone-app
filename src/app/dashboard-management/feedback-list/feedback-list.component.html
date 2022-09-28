@@ -1,0 +1,79 @@
+<ion-content scroll="true"><app-application-header [applicationHeader]="headerText"></app-application-header>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" [routerLink]="['/add-feedback']">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+<div class="list-container">
+  <ion-list>
+
+    <div class="box-shadow item" *ngFor="let item of listFeedback" (click)="getFeedbackMessages(item)">
+      <ion-avatar slot="start" class="ios hydrated">
+        <img src={{item.creatorProfileImage}} />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.subject}}</h2>
+        <p>I did  send money to a account once but...</p>
+        <p class="date">{{date}}</p>
+      </ion-label>
+    </div>
+
+    <!-- <div class="box-shadow item">
+      <ion-avatar slot="start" class="ios hydrated">
+        <img src="/assets/icon/prof_pic.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Request for refund send money</h2>
+        <p>I did  send money to a account once but...</p>
+        <p class="date">25 June 2022 | 6.30pm</p>
+      </ion-label>
+    </div>
+
+    <div class="box-shadow item">
+      <ion-avatar slot="start" class="ios hydrated">
+        <img src="/assets/icon/prof_pic.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Request for refund send money</h2>
+        <p>I did  send money to a account once but...</p>
+        <p class="date">25 June 2022 | 6.30pm</p>
+      </ion-label>
+    </div>
+
+    <div class="box-shadow item">
+      <ion-avatar slot="start" class="ios hydrated">
+        <img src="/assets/icon/prof_pic.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Request for refund send money</h2>
+        <p>I did  send money to a account once but...</p>
+        <p class="date">25 June 2022 | 6.30pm</p>
+      </ion-label>
+    </div>
+
+    <div class="box-shadow item">
+      <ion-avatar slot="start" class="ios hydrated">
+        <img src="/assets/icon/prof_pic.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Request for refund send money</h2>
+        <p>I did  send money to a account once but...</p>
+        <p class="date">25 June 2022 | 6.30pm</p>
+      </ion-label>
+    </div>
+
+    <div class="box-shadow item">
+      <ion-avatar slot="start" class="ios hydrated">
+        <img src="/assets/icon/prof_pic.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Request for refund send money</h2>
+        <p>I did  send money to a account once but...</p>
+        <p class="date">25 June 2022 | 6.30pm</p>
+      </ion-label>
+    </div> -->
+
+  </ion-list>
+</div>
+</ion-content>

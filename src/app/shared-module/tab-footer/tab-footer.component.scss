@@ -1,0 +1,44 @@
+.bottomTabbar{
+    background: url(/assets/icon/nav_bg.svg) top center no-repeat;
+}
+.bottomNav {
+  border:none; 
+  height:80px;
+
+}
+.tabBar{
+  bottom: -10px;
+  top: auto;
+  height: 95px;
+  overflow: visible;
+  background: url(/assets/icon/nav_bg.svg) top center no-repeat;
+  padding-top: 16px;
+  position:fixed;
+}
+.bottomNav * {
+  background: transparent;
+  font-size: 11px;
+  white-space: nowrap;
+  position: relative;
+  line-height: 20px;
+}
+
+.bottomNav span {
+  display: block;
+  border-radius: 100px;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(180deg, #1a16ff -9.66%, #dd09ff 125%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: -4px -2px 8px #ffffff, 4px 2px 8px rgba(145, 145, 145, 0.657315);
+  border: none;
+  line-height: 54px;
+
+}
+.bottomNav .pay{
+  margin-top:-12px;
+}
+.bottomNav ion-tab-button:nth-child(4n){
+  letter-spacing: -1px;
+}

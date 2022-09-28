@@ -1,0 +1,160 @@
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <div class="mobile-recharge box-shadow">
+    <h3>Select Operator</h3>
+    <div class="operator">
+      <!-- <ul>
+        <li><img src="/assets/bl.jpg"/></li>
+        <li><img src="/assets/gp.jpg"/></li>
+        <li><img src="/assets/robi.jpg"/></li>
+        <li><img src="/assets/airtel.jpg"/></li>
+        <li><img src="/assets/teletalk.jpg"/></li>
+      </ul> -->
+
+      <ul>
+        <li
+          [ngClass]="{
+            select: checkPhoneNoStatus.operator == 2,
+            deselect: checkPhoneNoStatus.operator == null
+          }"
+        >
+          <img
+            src="/assets/bl.jpg"
+            value="2"
+            name="operator"
+            ngDefaultControl
+            id="blImg"
+            (click)="showPreviewBl()"
+          />
+        </li>
+        <li
+          [ngClass]="{
+            select: checkPhoneNoStatus.operator == 1,
+            deselect: checkPhoneNoStatus.operator == null
+          }"
+        >
+          <img
+            src="/assets/gp.jpg"
+            value="1"
+            name="operator"
+            ngDefaultControl
+            id="gpImg"
+            (click)="showPreviewGp()"
+          />
+        </li>
+        <li
+          [ngClass]="{
+            select: checkPhoneNoStatus.operator == 3,
+            deselect: checkPhoneNoStatus.operator == null
+          }"
+        >
+          <img
+            src="/assets/robi.jpg"
+            value="3"
+            name="operator"
+            ngDefaultControl
+            id="robiImg"
+            (click)="showPreviewRobi()"
+          />
+        </li>
+        <li
+          [ngClass]="{
+            select: checkPhoneNoStatus.operator == 4,
+            deselect: checkPhoneNoStatus.operator == null
+          }"
+        >
+          <img
+            src="/assets/airtel.jpg"
+            value="4"
+            name="operator"
+            ngDefaultControl
+            id="airtelImg"
+            (click)="showPreviewAirtel()"
+          />
+        </li>
+        <li
+          [ngClass]="{
+            select: checkPhoneNoStatus.operator == 5,
+            deselect: checkPhoneNoStatus.operator == null
+          }"
+        >
+          <img
+            src="/assets/teletalk.jpg"
+            value="5"
+            name="operator"
+            ngDefaultControl
+            id="teletalkImg"
+            (click)="showPreviewTeletalk()"
+          />
+        </li>
+      </ul>
+    </div>
+    <div class="enter-number">
+      <h3>Enter mobile no/select from contacts</h3>
+      <input type="number" placeholder="" />
+
+      <div class="numberDetails" >
+        <table border="0">
+          <tr>
+            <th>Name</th>
+            <td>:</td>
+            <td>{{ name }}</td>
+          </tr>
+          <tr >
+            <th>Mobile No</th>
+            <td>:</td>
+            <td>{{ number }}</td>
+          </tr>
+          </table>
+          </div>
+          
+      <div class="contact-icon">
+        <a (click)="getContacts()">
+          <img src="/assets/icon/contact.svg" />
+        </a>
+      </div>
+    </div>
+    <div class="operator-type">
+      <div class="item"><input type="radio" /> <span>Prepaid</span></div>
+      <div class="item"><input type="radio" /> <span>Postpaid</span></div>
+    </div>
+
+    <div class="enter-number">
+      <h3>Amount</h3>
+      <input type="number" placeholder="" />
+      <div class="amount">
+        <span>50</span>
+        <span>100</span>
+        <span>200</span>
+        <span>300</span>
+        <span>500</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-details box-shadow">
+    <h3>Recent Contact</h3>
+    <div class="contact-details-list">
+      <div class="person-details" *ngFor="let contact of contacts | async">
+        <ion-item (click)="selectTenant(contact)">
+          <ion-avatar slot="start">
+            <img src="/assets/icon/prof_pic.jpg" />
+          </ion-avatar>
+          <ion-label >{{ contact.displayName }} <br />
+            <span *ngFor="let item of contact.phoneNumbers" (click)="selectTenantNumber(item)">{{ item.number }}</span></ion-label
+          >
+        </ion-item>
+      </div>
+    </div>
+  </div>
+  <div class="next-main-div">
+    <ion-button
+      color="default"
+      [routerLink]="['/dashboard/recharge/mobile-recharge-payment']"
+      class="next-btn"
+    >
+      <span>{{ "sendMoneyPage.next" | translate }}</span>
+      <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

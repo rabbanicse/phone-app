@@ -1,0 +1,789 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+/* @import "~@ionic/angular/css/padding.css";*/
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('./assets/fonts/Nexa-Bold.eot');
+  src: url('./assets/fonts/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Nexa-Bold.woff2') format('woff2'),
+      url('./assets/fonts/Nexa-Bold.woff') format('woff'),
+      url('./assets/fonts/Nexa-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('./assets/fonts/Nexa-Light.eot');
+  src: url('./assets/fonts/Nexa-Light.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Nexa-Light.woff2') format('woff2'),
+      url('./assets/fonts/Nexa-Light.woff') format('woff'),
+      url('./assets/fonts/Nexa-Light.ttf') format('truetype');
+  font-weight: 300;
+
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('./assets/fonts/NexaRegular.eot');
+  src: url('./assets/fonts/NexaRegular.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/NexaRegular.woff2') format('woff2'),
+      url('./assets/fonts/NexaRegular.woff') format('woff'),
+      url('./assets/fonts/NexaRegular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body, ion-content, * {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+}
+*{
+   --box-shadow:none;
+}
+
+:host(.button-solid), :host {
+  --box-shadow:none;
+}
+.ion-padding{
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-bottom:0;
+    --padding-top:0;
+}
+ion-header, .toolbar-title-default{
+    --background: linear-gradient(#3c3a91, #9518c1);
+}
+.title-default,  ion-buttons.buttons-first-slot{
+  color:#ffffff;
+  text-align:center;
+}
+
+.ion-page {
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: auto;
+  display: inline;
+  position: static;
+  flex-direction: column;
+  justify-content: space-between;
+  contain: layout size style;
+  overflow: hidden;
+  z-index: 0;
+}
+.field input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  color: #555;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background: #e3edf7;
+  box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.6), inset 4px 4px 5px #c5d7ee;
+  border-radius: 4px;
+}
+
+.toggle-bar {
+  position: absolute;
+  background-image: url(/assets/icon/menu.svg);
+  align-items: flex-start;
+  color: #f1f1f1;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(180deg, #54329e 0%, #8c1dbc 100%);
+  box-sizing: border-box;
+  box-shadow: -5px -5px 12px rgba(255, 255, 255, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 100px;
+}
+
+.toggle-icon {
+  background: url(/assets/icon/menu.svg) center center no-repeat;
+  width: 36px;
+  height: 36px;
+}
+
+.dashboard-heading {
+  display: flex;
+  background: linear-gradient(rgba(60, 58, 145, 1), rgba(149, 24, 193, 1));
+  flex-direction: row;
+  height: 58px;
+}
+.form-main  span {
+  display: block;
+  margin: 20px 0 0 0;
+   color:#232E42;
+   font-size: 13px;
+}
+
+.next-main-div {
+  position: relative;
+  margin-bottom:80px;
+  padding:0 5%;
+}
+
+.next-btn {
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: linear-gradient(rgba(60, 58, 145, 1), rgba(149, 24, 193, 1)) !important;
+  box-shadow: 2px 2px 15px #728eab, -6px -6px 20px #ffffff, 4px 4px 20px rgba(111, 140, 176, 0.41);
+  border-radius: 10px;
+  position:relative;
+}
+
+.next-btn span {
+  position: absolute;
+  width: 45px;
+  height: 22px;
+  left: 0.5rem;
+  top: 12px;
+  font-style: normal;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.next-btn > ion-icon {
+    position: absolute;
+    width: 30px;
+    height: 22px;
+    right: 0;
+    color: #ffffff;;
+}
+
+.next-main-div > ion-button {
+  position: relative;
+  height: 40px;
+  font-size: 16px;
+  background: linear-gradient(rgba(60, 58, 145, 1), rgba(149, 24, 193, 1)) !important;
+  box-shadow: 2px 2px 15px #728eab, -6px -6px 20px #ffffff, 4px 4px 20px rgba(111, 140, 176, 0.41);
+  border-radius: 10px;
+  width: 100%;
+  z-index: 9;
+}
+
+
+.link-button {
+  font-size: 11px;
+  color: #78848f;
+  background: #ffffff;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+}
+
+.link-button > ion-grid {
+  position: relative;
+  font-size: 14px;
+  left: 1rem;
+}
+
+.otp-user-input a {
+  color:#384FC9;
+}
+
+.otp-user-input *, .nid-first-div *, .nid-second-div *, .completed{
+    color:#232E42;
+}
+
+ion-select{
+    border-radius: 4px;
+    height: 45px;
+    border: none;
+    background: #e3edf7;
+    box-shadow: inset -4px -4px 9px rgb(255 255 255 / 60%), inset 4px 4px 5px #c5d7ee;
+}
+.input_otp input{
+  background: #fff;
+  border: #ccc !important;
+  width: 20% !important;
+}
+
+.box-shadow{
+	background: #e3edf7;
+    box-shadow: inset -2px -2px 0px rgb(59 68 81 / 25%), inset 3.73381px 3.73381px 6.22302px rgb(0 0 0 / 25%);
+    border-radius: 15px;
+    margin: 5%;
+}
+
+
+/* card design */
+
+.slider,
+.slider-debit {
+  width: 90%;
+  left: 5%;
+  top: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.slider > ion-slides,
+.slider-debit > ion-slides {
+  position: relative;
+  top: 0px;
+  height: 245px;
+  background: #e3edf7;
+  box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.sliding-img-credit {
+  width: 40rem;
+}
+
+
+.slider_btn {
+  margin-top: 15px;
+}
+.slide-button-credit-manage,
+.slide-button-credit-pay {
+  height: 30px;
+  background: #e3edf7;
+  box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1), 4px 4px 20px rgba(111, 140, 176, 0.41);
+  border-radius: 100px;
+  font-size: 12px;
+  color: #1484ec;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+//Debit card design
+
+.debit-text,
+.credit-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.63);
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+
+.hint-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(94, 111, 206, 0.63);
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+$blue: #174395;
+$lightBlue: #ace4fa;
+$silver: #ececec;
+$space: 20px;
+
+
+.cc {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-radius: 20px;
+  height: 200px;
+  margin: 0.5rem;
+  overflow: hidden;
+  padding: 0.8rem;
+  position: relative;
+  width: 320px;
+}
+.swiper-slide:nth-child(even) .cc{
+  background: #4776E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.swiper-slide:nth-child(odd) .cc{
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+
+.shine {
+  background: rgba(255, 255, 255, 0.05);
+  left: 190px;
+  top: 0;
+  margin: 0 15px 0 0;
+  padding: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(50deg);
+  -moz-transform: skew(50deg);
+  -ms-transform: skew(50deg);
+  -o-transform: skew(50deg);
+  transform: skew(50deg);
+}
+
+.shine-layer-two {
+  -webkit-transform: skew(80deg);
+  -moz-transform: skew(80deg);
+  -ms-transform: skew(80deg);
+  -o-transform: skew(80deg);
+  transform: skew(80deg);
+}
+
+.shine-layer-three {
+  transform: skew(40deg);
+}
+.cc h2 {
+  font: 18px Anaheim;
+  color: #fff;
+  margin: 5px 20px;
+  padding: 0 0 15px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.card-logo{
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+.card-logo img{
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+.number, .chip-day{
+  padding:3px 5px 0;
+  display: flex;
+}
+.number span{
+  font: 20px Inconsolata, sans-serif;
+  color: #fff;
+  width: 100%;
+  margin: 10px;
+}
+.chip-day div{
+  color: #fff;
+  width: 100%;
+  margin:0 10px;
+}
+.dayleft{
+  text-align: right;
+}
+.dayleft .day-box {
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px;
+}
+.chip{
+  text-align: left;
+  padding-top: 5px;
+}
+.valid-div, .cvv{
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+.cvv{
+  left: 140px;
+}
+.valid-div span, .cvv span{
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+}
+.date{
+  font: 18px Anaheim, sans-serif;
+  color: #fff;
+}
+.days{
+  font-size: 15px;
+}
+
+.full-name {
+  width: 100%;
+  text-align: left;
+}
+
+.instructions {
+  letter-spacing: 1px;
+  font: 12px Anaheim, sans-serif;
+  color: $lightBlue;
+}
+
+.swiper-slide:nth-child(even) .debit{
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+.swiper-slide:nth-child(odd) .debit{
+
+  background: #5f2c82;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.condition {
+  margin: 25px 0 15px 5%;
+}
+
+.condition-checkbox{
+  vertical-align: middle;
+  margin-right: 5px;
+
+}
+.condition-link {
+  margin-left: 2px;
+}
+.condition-text{
+  font-size: 13px;
+  color: #232E42;
+}
+.condition a{
+  text-decoration: none;
+  color: #9420F3;
+}
+ion-modal {
+  --height: 100%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+ion-modal::part(backdrop) {
+  background: rgba(209, 213, 219);
+  opacity: 1;
+}
+
+ion-modal ion-toolbar {
+  --background: rgb(14 116 144);
+  --color: white;
+}
+ /* OTP Page */
+.biling-details {
+  color: #000;
+  line-height: normal;
+  margin: 0 0 25px;
+}
+.biling-details h2{
+  color: #384FC9;
+  margin: 0;
+  font-size: 20px;
+}
+.biling-details .amount{
+  font-size: 28px;
+  float: bold;
+}
+.biling-details h5{
+  margin: 3px 0;
+}
+
+.otp-main-div h6 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.otp-main-div {
+  background: #e3edf7;
+  box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  left: 5%;
+  width: 90%;
+  text-align: center;
+  padding: 25px;
+  position: relative;
+  padding: 25px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.input_otp {
+  text-align: center;
+  margin: 20px 0;
+}
+.input_otp input {
+  width: 20%;
+  height: 35px;
+  border: 1px solid #a1a1a1;
+  margin: 5px;
+  background: #e3edf7;
+    box-shadow: inset -4px -4px 9px rgb(255 255 255 / 60%), inset 4px 4px 5px #c5d7ee;
+    text-align: center;
+}
+.resend{
+  display:block;
+}
+.next-main-div{
+padding:0 5% ;
+}
+.otp-msg{
+  color: red;
+  text-align: center;
+}
+
+/* Success Page */
+.payment-message-main {
+  position: relative;
+  width: 90%;
+  text-align: center;
+  padding: 25px;
+  padding-bottom: 50px;
+  top: 20%;
+}
+
+.payment-message-second span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.completed {
+  font-size: 18px;
+  color: #4E4E4E;
+}
+
+
+/* Marchant Page */ 
+
+
+.form-main,
+.condition {
+  width: 90%;
+  margin-left: 5%;
+}
+.condition {
+  margin-top: 15px;
+  color: #333;
+}
+.field-receiver{
+  margin-top: 25px;
+  color: #232E42;
+}
+.field-receiver div{
+  font-size: 13px;
+}
+.receiver-input{
+    padding-top: 10px;
+}
+.receiver-input img {
+    max-width: 30px;
+    height: auto;
+}
+.receiver-input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+.receiver-input span{
+    padding-left: 10px;
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+}
+.field-receiver input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  color: #868686;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background: #e3edf7;
+  //box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.6), inset 4px 4px 5px #c5d7ee;
+  border-radius: 4px;
+}
+
+
+/* Popup */
+
+.small-modal {
+  &::part(backdrop) {
+    // background-color: red;
+    background: rgba(0, 0, 0, .9);
+  }
+  &::part(content) {
+    width: 95%;
+    height: 390px;
+    margin: auto;
+    border-radius: 30px;
+  }
+}
+.nid-first-div img, .nid-second-div img{
+  max-height: 200px;
+  width: auto;
+  max-width: 100%;
+}
+
+.link-button ion-col {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #555;
+  padding: 5px 10px;
+}
+
+
+.payment-message-main {
+  position: relative;
+  background: #e3edf7;
+  box-shadow: inset -2px -2px 0px rgba(59, 68, 81, 0.25), inset 3.73381px 3.73381px 6.22302px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 90%;
+  text-align: center;
+  padding: 25px;
+  position: absolute;
+  padding: 25px;
+  top: 35%;
+}
+
+.payment-message-second span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  display: block;
+}
+
+.completed {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.toggle-icon {
+  background: url(/assets/icon/back.svg) center center no-repeat;
+  width: 36px;
+  height: 36px;
+}
+
+.heading-text {
+  position: absolute;
+  top: 15px;
+  font-size: 20px;
+  color: #f1f1f1;
+  left: 50px;
+  right: 50px;
+  text-align: center;
+}
+
+.toggle-bar.notification {
+  top: 10px;
+  right: 10px;
+  left: auto;
+  color: #f1f1f1;
+  font-size: 40px;
+}
+
+.heading-notification {
+  background: url(/assets/icon/notifications.svg) top center no-repeat;
+  width: 36px;
+  height: 36px;
+}
+.enter-number h3{
+  margin: 0;
+  font-size: 14px;
+  color: #5A6E81;
+}
+.enter-number input{
+  padding: 10px;
+  box-shadow: inset -4px -4px 9px rgb(255 255 255 / 60%), inset 4px 4px 5px #c5d7ee;
+  background: #e3edf7;
+  width: 100%;
+  border: none;
+  margin-top: 10px;
+}
+.contact-icon {
+  position: absolute;
+  right: 8px;
+  top: 33px;
+}
+.contact-details h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #444;
+}
+div.contact-details + .next-main-div {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  z-index: 9;
+}
+
+.receiver {
+  display: flex;
+}
+.receiver ion-label{
+  display: block;
+}
+.receiver span{
+  margin: 0;
+}
+.receiver img{
+  max-width: 45px;
+  border-radius: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  margin-right: 15px;
+}
+.receiver-form .label{
+  margin: 10px 0 5px;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+ion-content .hint-text{
+  font-weight: 500;
+}
+ion-fab-button ion-icon{
+  font-size: 20px;
+}

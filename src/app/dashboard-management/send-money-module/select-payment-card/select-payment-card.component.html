@@ -1,0 +1,131 @@
+<app-application-header  [applicationHeader]="headerText"></app-application-header>
+
+<!-- Credit Card -->
+<ion-content class="ion-padding">
+<ion-label class="hint-text">{{hintText}}</ion-label>
+<div class="slider" style="align-items: center" >
+  <ion-label class="credit-text">{{'cardPage.creditCard' | translate }}</ion-label>
+  <ion-slides [options]="{ slidesPerView: true, loop: true }" >
+    <ion-slide class="sliding-img-credit"  *ngFor="let item of creditCard; index as i;">
+      <!-- Slide 2 -->
+
+      <div class="cc" (click)="openModal(item)">
+
+        <!---
+        <span class="provider mastercard">{{'cardPage.masterCard' | translate}}</span>
+        <span class="provider amex">{{'cardPage.americanExpress' | translate}}</span>
+        <span class="provider visa">{{'cardPage.visa' | translate}}</span>
+        -->
+        <h2>{{ item.cardName}}</h2>
+        <div class="chip-day">
+        <div class="chip">
+          <img src="/assets/chip.png" class="img-center"/>
+        </div>
+        <div class="dayleft"> <span class="day-box"> Day Left <br> <span class="days"> 30 </span></span></div>
+      </div>
+        <!-- card number -->
+        <div class="number">
+          <span>{{item.cardNumber | slice:0:4 }}</span>
+          <span>{{item.cardNumber | slice:4:8 }}</span>
+          <span>{{item.cardNumber | slice:8:12 }}</span>
+          <span>{{item.cardNumber | slice:12:16 }}</span>
+          <!-- {{item.cardNumber}}-->
+        </div>
+
+        <!-- valid / ccv -->
+        <div class="date">
+          <div class="valid-div">
+            <span class="instructions valid">{{'cardPage.validThru' | translate}}</span>
+            <span class="date">{{item.expiryDate  | date: 'MM/yy'}}</span>
+          </div>
+        </div>
+<!--
+          <div class="cvv">
+            <span class="instructions valid">{{'cardPage.ccv' | translate}}</span>
+            <span>{{item.cvv}}</span>
+          </div>
+-->
+
+
+
+        <div class="card-logo">
+          <img src="/assets/visa-white.png" class="img-center"/>
+        </div>
+
+        <!-- shine -->
+        <div class="shine"></div>
+        <div class="shine shine-layer-two"></div>
+      </div>
+
+      <!-- <img src="/assets/icon/2.jpg"> -->
+
+    </ion-slide>
+  </ion-slides>
+</div>
+
+<!-- Debit Card -->
+
+<div class="slider-debit" style="align-items: center" >
+  <ion-label class="debit-text">{{'cardPage.debitCard' | translate}}</ion-label>
+  <ion-slides [options]="{ slidesPerView: true, loop: true }">
+    <ion-slide  *ngFor="let item of debitCard; index as i;">
+      <!-- Slide 1 -->
+
+      <!-- <img src="/assets/icon/2.jpg">  -->
+      <div class="cc debit" (click)="openModal(item)">
+        <!---
+        <span class="provider mastercard">{{'cardPage.masterCard' | translate}}</span>
+        <span class="provider amex">{{'cardPage.americanExpress' | translate}}</span>
+        <span class="provider visa">{{'cardPage.visa' | translate}}</span>
+        -->
+        <h2>{{ item.cardName}}</h2>
+        <div class="chip-day">
+        <div class="chip">
+          <img src="/assets/chip.png" class="img-center"/>
+        </div>
+        <div class="dayleft"> <span class="day-box"> Day Left <br> <span class="days"> 30 </span></span></div>
+      </div>
+        <!-- card number -->
+        <div class="number">
+          <span>{{item.cardNumber | slice:0:4 }}</span>
+          <span>{{item.cardNumber | slice:4:8 }}</span>
+          <span>{{item.cardNumber | slice:8:12 }}</span>
+          <span>{{item.cardNumber | slice:12:16 }}</span>
+          <!-- {{item.cardNumber}}-->
+        </div>
+
+        <!-- valid / ccv -->
+        <div class="date">
+          <div class="valid-div">
+            <span class="instructions valid">{{'cardPage.validThru' | translate}}</span>
+            <span class="date">{{item.expiryDate  | date: 'MM/yy'}}</span>
+          </div>
+        </div>
+
+
+        <div class="card-logo">
+          <img src="/assets/visa-white.png" class="img-center"/>
+        </div>
+
+        <!-- shine -->
+        <div class="shine"></div>
+        <div class="shine shine-layer-two"></div>
+      </div>
+
+      <!-- <img src="/assets/icon/2.jpg"> -->
+
+    </ion-slide>
+  </ion-slides>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!-- <div class="next-main-div">
+  <ion-button color="default" [routerLink]="['/dashboard/send-money/payment-otp']" class="next-btn"><span>{{'Next' | translate}}</span>
+    <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+</div> -->
+</ion-content>
+
+

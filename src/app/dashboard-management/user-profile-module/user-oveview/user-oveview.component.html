@@ -1,0 +1,61 @@
+
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+<ion-content scroll-y="true">
+  <section class="main-nav">
+    <div class="profile box-shadow">
+        <div class="profile-pic">
+          <ion-img [src]="imageData"></ion-img>
+        </div>
+        <!--        <img src="/assets/icon/prof_pic.jpg" />-->
+      <div class="profile-details"  [routerLink]="['/dashboard/user-info/user-personal-info']">
+        <div class="profile-name">{{userdata.data?.userName || ''}}</div>
+        <div class="profile-mobile">{{userdata?.data?.mobileNo || ''}}</div>
+      </div>
+      <div class="verify">Verified</div>
+    </div>
+    <h4>{{"userOverviewPage.menu" | translate}}</h4>
+    <div class="left-menu box-shadow">
+      <ul>
+        <li><a [routerLink]="['/my-account']"><span class="menu-icon" ><img src="/assets/icon/calendar.svg"/></span> <span>{{ "userOverviewPage.myAccount" | translate }}</span></a>
+        </li>
+
+        <li><a  [routerLink]="['/beneficiary-management']"><span class="menu-icon"><img src="/assets/icon/settings.svg"/></span> <span>{{"userOverviewPage.beneficiaryManagement" | translate}}</span></a>
+        </li>
+
+        <li><a  [routerLink]="['/transaction-report']"><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span> <span>{{"userOverviewPage.transactionReport" | translate}}</span></a>
+        </li>
+        <li><a  [routerLink]="['/feedback']"><span class="menu-icon" ><img src="/assets/icon/bookmark.svg"/></span>
+          <span >{{"userOverviewPage.feedback" | translate}}</span></a></li>
+          <li><a ><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span> <span>{{"userOverviewPage.rewardPoint" | translate}}</span></a>
+          </li>
+          <li><a  ><span class="menu-icon" ><img src="/assets/icon/bookmark.svg"/></span>
+            <span >{{"userOverviewPage.faq" | translate}}</span></a></li>
+      </ul>
+    </div>
+    <h4>{{"userOverviewPage.setting" | translate}}</h4>
+    <div class="left-menu box-shadow">
+      <ul>
+        <li class="no-arrow toggle-btn"><a ><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span>
+          <span>{{ "dashboardPage.language" | translate }} <ion-toggle
+            slot="start"
+            (ionChange)="switchLanguage($event)"
+            name="theme"
+          ></ion-toggle></span></a>
+        </li>
+        <li class="no-arrow toggle-btn"><a ><span class="menu-icon"><img src="/assets/icon/settings.svg"/></span>
+          <span>{{ "dashboardPage.themeChange" | translate }}
+            <ion-toggle
+              slot="start"
+              (ionChange)="onTogggleThemeChange($event)"
+              name="theme"
+            ></ion-toggle> </span></a></li>
+        <li><a ><span class="menu-icon"><img src="/assets/icon/calendar.svg"/></span>
+          <span [routerLink]="['/change-password']">{{"userOverviewPage.changePasword" | translate}}</span></a></li>
+        <li><a ><span class="menu-icon"><img src="/assets/icon/bookmark.svg"/></span>
+          <span (click)="logout()">{{"userOverviewPage.logout" | translate}}</span></a></li>
+      </ul>
+    </div>
+    <br>
+    <br><br>
+  </section>
+</ion-content>

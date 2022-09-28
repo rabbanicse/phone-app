@@ -1,0 +1,159 @@
+{
+    "dashboardPage": {
+        "headerText":"ফোন-এ",
+        "profile": "প্রোফাইল",
+        "contact": "যোগাযোগ",
+        "offer": "অফার",
+        "pos": "পিওএস",
+        "reqMoney": "টাকা অনুরোধ",
+        "apps": "অ্যাপস",
+        "billPay": "বিল পরিশোধ",
+        "shopping": "কেনাকাটা",
+        "tution": "টিউশন",
+        "food": "খাবার",
+        "menu": "তালিকা",
+        "themeChange": "থিম পরিবর্তন",
+        "chat":"চ্যাট",
+        "cards":"তাস",
+        "pay":"পরিশোধ করা",
+        "sendMoney":"টাকা পাঠাও",
+        "scan":"স্ক্যান",
+        "language":"ভাষা"
+    },
+    "cardPage":{
+        "creditCard":"ক্রেডিট কার্ড",
+        "bankOfPhoneA":"ব্যাংক অফ ফোন-এ",
+        "masterCard":"মাস্টার কার্ড",
+        "americanExpress": "আমেরিকান এক্সপ্রেস",
+        "visa":"ভিসা",
+        "validThru":"ভ্যালিড থ্রু",
+        "ccv":"সি সি বি",
+        "nameOnCard":"কার্ডের নাম",
+        "manage":"ম্যানেজ",
+        "payNow":"প্রদান করুন",
+        "addCard":"কার্ড যোগ করুন",
+        "debitCard":"ডেবিট কার্ড"
+    },
+    "billpayPage":{
+        "apps": "অ্যাপস",
+        "billPay": "বিল পরিশোধ",
+        "shopping": "কেনাকাটা",
+        "tution": "টিউশন",
+        "food": "খাবার",
+        "menu": "তালিকা",
+        "themeChange": "থিম পরিবর্তন",
+        "chat":"চ্যাট",
+        "cards":"কার্ড",
+        "pay":"পরিশোধ করা",
+        "sendMoney":"টাকা পাঠাও",
+        "scan":"স্ক্যান"
+    },
+    "creditBillpayPage":{
+        "payFrom":"প্রদান করুন",
+        "chooseCardBill":"কার্ড যোগ করুন",
+        "payTo":"পরিশোধ করুন",
+        "amount":"অ্যামাউন্ট",
+        "condition":"আমি শর্তাবলী পড়েছি",
+        "terms":"এবং তাতে সম্মত",
+        "next":"পরবর্তী"
+    },
+    "addCardPage":{
+        "cardType":"কার্ডের ধরণ",
+        "cardNumber":"কার্ড নাম্বার",
+        "name":"নাম",
+        "billingDate":"বিলিং তারিখ",
+        "monthYear":"বিলিং ",
+        "expiry":"মেয়াদ",
+        "condition":"আমি শর্তাবলী পড়েছি",
+        "terms":"এবং তাতে সম্মত",
+        "next":"পরবর্তী",
+        "cvv": "সিভিভি"
+    },
+    "loginPage":{
+        "headerText":"ফোন-এ",
+        "loginText":"লগইন",
+        "loginButton":"লগইন",
+        "registration":"রেজিস্ট্রেশন",
+        "emailorPhone":"মোবাইল নম্বর",
+        "password":"পাসওয়ার্ড"
+    },
+    "nidScanPage":{
+        "captureFrontPage":"আপনার জাতীয় পরিচয় পত্রের সামনের পৃষ্ঠার ছবি তুলুন",
+        "captureBackPage":"আপনার জাতীয় পরিচয় পত্রের পিছনের পৃষ্ঠার ছবি তুলুন",
+        "next":"পরবর্তী"
+    },
+    "nidScanDetailsPage":{
+        "name":"নাম",
+        "dob":"জন্ম তারিখ",
+        "nidNo":"জাতীয় পরিচয়পত্র",
+        "fathersName":"পিতার নাম",
+        "mothersName":"মাতার নাম",
+        "email":"ইমেইলর",
+        "phoneNo": "ফোন নম্বর",
+        "address":"ঠিকানা",
+        "district":"জেলা",
+        "password":"পাসওয়ার্ড",
+        "confirmPassword":"পাসওয়ার্ড নিশ্চিত করুন",
+        "next":"পরবর্তী"
+    },
+    "registrationPage":{
+        "headerText":"ফোন-এ",
+        "userRegistration":"গ্রাহকের নিবন্ধন",
+        "condition":"আমি শর্তাবলী পড়েছি",
+        "terms":"এবং তাতে সম্মত",
+        "next":"পরবর্তী",
+        "mobile":"মোবাইল"
+    },
+    "sendMoneyPage":{
+        "sendToPhoneA":"সেন্ড টু ফোন-এ",
+        "sendToCard":"সেন্ড টু কার্ড",
+        "enterPhoneNumber":"মোবাইল নাম্বার প্রদান করুন",
+        "next":"পরবর্তী"
+    },
+    "applicationHeader":{
+        "headerText":"ফোন-এ"
+    },
+    "otpVerificationPage":{
+        "otpVerification":"OTP যাচাইকরণ",
+        "enterOtpCodeSentTo":"প্রেরিত OTP কোড লিখুন",
+        "otpSentNumber":"01914434588",
+        "notRecieveOtpCode":"OTP কোড পাননি",
+        "resendCode":"পুনরায় কোড পাঠান",
+        "next":"পরবর্তী"
+    },
+    "paymentMessagePage":{
+        "congratulations":"অভিনন্দন",
+        "registrationCompleted":"আপনার নিবন্ধন সম্পন্ন হয়েছে"
+    },
+    "tabFooter":{
+        "chat":"চ্যাট",
+        "cards":"কার্ড",
+        "pay":"প্রদান করুন",
+        "sendMoney":"টাকা পাঠান",
+        "scan":"স্ক্যান"
+    },
+    "sendMoneyReceiverPage":{
+        "receiver":"গ্রহীতা",
+        "amount":"পরিমাণ",
+        "next":"পরবর্তী "
+    },
+    "sendMoneyToCardPage":{
+        "sendToPhoneA":"সেন্ড টু ফোন-এ",
+        "sendToCard":"সেন্ড টু কার্ড",
+        "receiver":"গ্রহীতা",
+        "amount":"পরিমাণ",
+        "next":"পরবর্তী "
+    },
+    "userOverviewPage": {
+      "myAccount": "আমার অ্যাকাউন্ট",
+      "beneficiaryManagement": "বেনিফিসারী ব্যবস্থাপনা",
+      "transactionReport": "লেনদেন রিপোর্ট",
+      "feedback": "ফিডব্যাক",
+      "rewardPoint": "রিওয়ার্ড পয়েন্ট",
+      "faq": "FAQ",
+      "changePasword": "পাসওয়ার্ড পরিবর্তন",
+      "logout": "লগ আউট",
+      "menu": "মেনু",
+      "setting": "অ্যাপ সেটিং"
+    }
+}

@@ -1,0 +1,62 @@
+.cc{
+    margin: auto;
+    margin-top: -120px;
+    max-width: 300px;
+}
+.slider {
+    margin: 0;
+    padding: 20px;
+    margin-top: 100px;
+}
+.card-details{
+    overflow: hidden;
+    margin-top: 20px;
+}
+.card-details div{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;    
+    text-align: center;
+}
+.card-details span {
+    display: block;
+    text-align: center;
+    color: #5A6E81;
+}
+
+.card-details .no-border {
+    border-bottom: none;
+}
+.card-details div:nth-child(even){
+    border-right: none;
+}
+.transaction{
+    width: 90%;
+    margin: auto;
+    padding-top: 25px;
+}
+.title{
+    color: #5A6E81;
+    text-transform: uppercase;
+}
+.trans-item {
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    padding: 5px 0;
+}
+.trans-item div{
+    float: left;
+    width: 50%;
+}
+.right-text{
+    text-align: right;
+}
+.trans-item span{
+    display: block;
+    color:#5A6E81;
+}
+div span.blue-text {
+    color: #384FC9;
+}

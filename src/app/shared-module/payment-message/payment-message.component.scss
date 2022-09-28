@@ -1,0 +1,54 @@
+
+
+.dashboard-heading {
+  display: flex;
+  background: linear-gradient(rgba(60, 58, 145, 1), rgba(149, 24, 193, 1));
+  flex-direction: row;
+  height: 58px;
+}
+
+.toggle-bar {
+  position: absolute;
+  background-image: url(/assets/icon/menu.svg);
+  align-items: flex-start;
+  color: #f1f1f1;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(180deg, #54329e 0%, #8c1dbc 100%);
+  box-sizing: border-box;
+  box-shadow: -5px -5px 12px rgba(255, 255, 255, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 100px;
+}
+
+.toggle-icon {
+  background: url(/assets/icon/back.svg) center center no-repeat;
+  width: 36px;
+  height: 36px;
+}
+
+.heading-text {
+  position: absolute;
+  top: 15px;
+  font-size: 20px;
+  color: #f1f1f1;
+  left: 50px;
+  right: 50px;
+  text-align: center;
+}
+
+.toggle-bar.notification {
+  top: 10px;
+  right: 10px;
+  left: auto;
+  color: #f1f1f1;
+  font-size: 40px;
+}
+
+.heading-notification {
+  background: url(/assets/icon/notifications.svg) top center no-repeat;
+  width: 36px;
+  height: 36px;
+}

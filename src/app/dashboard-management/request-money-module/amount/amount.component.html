@@ -1,0 +1,40 @@
+
+<app-application-header [applicationHeader]="headerText"></app-application-header>
+
+<!--card input box  -->
+<section class="form-main receiver-form">
+  <form>
+    <div class="field-receiver">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <span class="label">Receiver</span>
+
+      <div class="receiver" >
+          <div class="prof-img">
+            <img src="/assets/icon/prof_pic.jpg"/>
+          </div>
+          <div>
+            <ion-label >Md Nazrul Islam </ion-label>
+            <span >01912343433</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <!-- <span>{{'addCardPage.cardType' | translate}}</span> -->
+      <span class="label">Amount</span>
+      <div>
+        <input type="number" placeholder="Enter Amount" />
+      </div>
+    </div>
+  </form>
+</section>
+
+
+<!-- Next Button -->
+<div class="next-main-div">
+  <ion-button color="default"
+              (click)="checkAmount()"
+              class="next-btn"><span>{{'addCardPage.next' | translate}}</span>
+    <ion-icon name="arrow-forward-outline" class="arrow-icon"></ion-icon>
+  </ion-button>
+</div>
